@@ -1,0 +1,67 @@
+#header {
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+}
+
+.navbar-item a {
+    color: currentColor;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    padding-right: 0.5rem;
+}
+
+.brand {
+    padding-left: 0;
+}
+
+#main {
+    background-color: #fafafa;
+}
+
+.is-about-me {
+    text-align: center;
+}
+
+.is-my-photo img {
+    width: 15em;
+    border-radius: 50%;
+}
+
+.browser::before {
+    position: relative;
+    content: "● ● ●";
+    display: block;
+    top: 2px;
+    left: 10px;
+    font-size: 14px;
+    color: #c1c5c8;
+}
+
+.browser {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 8%;
+    background-color: #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
+
+.empty {
+    width: 100%;
+    height: 12em;
+}
+
+#footer {
+    border-top: 1px solid rgba(0,0,0,.0975);
+}
