@@ -14,7 +14,7 @@
         <header id="header">
             <nav class="navbar">
                 <div class="container">
-                    <div class="columns is-mobile is-marginless">
+                    <div class="columns is-mobile is-marginless is-paddingless-mobile">
                         <div class="column">
                             <div class="navbar-brand">
                                 <a class="navbar-item logo" href="/">
@@ -47,22 +47,29 @@
         <main id="main" class="section">
             <div class="container">
                 <div class="columns">
-                    <div class="column is-3">
-                        <div class="is-my-photo center">
-                            <img src="images/me.jpg" alt="Matheus Almeida">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="is-about-me">
-                            <h1 class="title">Hi, I'm Matheus Almeida</h1>
-                            <p class="subtitle">I'm a front-end developer from Manaus, Brazil. I build clean websites to help my clients push their businesses further online.</p>
-                        </div>
-                    </div>
-                </div>
+                    <div class="column is-10 is-offset-1">
+                    	<div class="columns">
+                    		<div class="column is-narrow">
+                              <div class="is-me">
+                                 <img src="images/me.jpg" alt="Matheus Almeida">
+                              </div>
+                          </div>
+                          <div class="column center has-text-centered-mobile">
+                          	   <div class="is-about-me">
+                          	   	   <h1 class="title">Hi, I'm Matheus Almeida</h1>
+                          	   	   <p class="subtitle">I'm a front-end developer from Manaus, Brazil. I build clean websites to help my clients push their businesses further online.</p>
+                          	   </div>
+                          </div>
+                      </div>
+                      </div>
+                 </div>
                 
                 <h2 class="title has-text-centered">My Recent Work</h2>
-                
+                <p class="subtitle has-text-centered">Here you can take a look at my recent works.<p>
+                	
                 <div class="columns">
+                	<div class="column is-10 is-offset-1">
+                		<div class="columns">
                     <div class="column">
                         <div class="browser">
                             <button class="button empty">Contact me</button>
@@ -86,6 +93,7 @@
                         </div>
                     </div>
                 </div>
+               </div>
             </div>
         </main>
         <footer id="footer" class="section">

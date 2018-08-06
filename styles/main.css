@@ -18,10 +18,6 @@
     align-items: center;
 }
 
-.logo {
-    padding-right: 0.5rem;
-}
-
 .brand {
     padding-left: 0;
 }
@@ -30,11 +26,7 @@
     background-color: #fafafa;
 }
 
-.is-about-me {
-    text-align: center;
-}
-
-.is-my-photo img {
+.is-me img {
     width: 15em;
     border-radius: 50%;
 }
@@ -59,9 +51,10 @@
 
 .empty {
     width: 100%;
-    height: 12em;
+    height: 12rem;
 }
 
 #footer {
     border-top: 1px solid rgba(0,0,0,.0975);
 }
+
