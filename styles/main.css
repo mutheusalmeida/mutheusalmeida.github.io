@@ -1,5 +1,13 @@
+html,
+body {
+	height: 100vh;
+	margin: 0;
+}
+
 body {
 	font-family: 'Encode Sans Semi Condensed', sans-serif;
+	font-size: 17px;
+	line-height: 25px;
 }
 
 #header {
@@ -41,6 +49,10 @@ body {
     border-radius: 50%;
 }
 
+h2 {
+	padding-top: 3rem;
+}
+
 .browser::before {
     position: relative;
     content: "● ● ●";
@@ -72,6 +84,16 @@ body {
 
 #footer {
     border-top: 1px solid rgba(0,0,0,.0975);
+}
+
+@media screen and (min-width: 460px) {
+  .is-hidden-mobile {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 460px) {
+	
 }
 
 @media screen and (min-width: 769px) {
