@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #2F2F2F;
   margin: 0;
   display: grid;
@@ -189,7 +189,7 @@ main {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  column-gap: 3px;
+  column-gap: 16px;
   font-size: 12px;
   align-self: center;
 }
