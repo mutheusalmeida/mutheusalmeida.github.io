@@ -1,4 +1,4 @@
-<h1 align="center">
+<p align="center">
   <a href="https://matheusalmeida.design">
     <svg width="58.2" height="37" viewBox="0 0 58.2 37">
       <path
@@ -6,7 +6,7 @@
             fill="#2F2F2F"></path>
     </svg>
   </a>
-</h1>
+</p>
 
 My personal portfolio site with only HTML and CSS.
 
