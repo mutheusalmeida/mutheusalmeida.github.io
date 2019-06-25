@@ -6,6 +6,6 @@
 
 <h1 align="center">Matheus Almeida</h1>
 
-This personal portfolio site uses HTML and CSS only.
+This a personal portfolio site that uses HTML and CSS only.
 
 **_Always a working-in-progress._**
