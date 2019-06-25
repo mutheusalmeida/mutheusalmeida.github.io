@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/blog/*"
-  to = "/blog/:splat"
+  to = "/blog"
   status = 200
