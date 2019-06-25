@@ -5,5 +5,5 @@
  */
 
 module.exports = {
-  pathPrefix: `/blog`,
+  pathPrefix: `blog/`,
 }
