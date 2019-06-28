@@ -1,20 +1,31 @@
 .search {
   display: grid;
-  grid-template-columns: auto max-content;
+  grid-template-columns: max-content 1fr;
+  max-width: 215px;
+  column-gap: 5px;
   background: #F1F3F4;
   align-items: center;
-}
-
-.search__icon {
-  
+  margin: 0 auto;
+  height: 37px;
+  padding: 0 16px;
 }
 
 .search__field {
-  font-size: 16px;
-  padding: 0.7rem;
+  font-size: 14px;
+  height: 37px;
+  width: 100%;
+  padding: 0;
   background: #F1F3F4;
   border: 0;
   border-radius: 2px;
+  outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }
 
 main {
