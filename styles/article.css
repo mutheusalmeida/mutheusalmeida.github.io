@@ -1,7 +1,12 @@
 .search {
   display: grid;
-  padding: 0.7rem;
+  grid-template-columns: auto max-content;
+  background: #F1F3F4;
   align-items: center;
+}
+
+.search__icon {
+  
 }
 
 .search__field {
