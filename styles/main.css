@@ -99,7 +99,7 @@ main {
 }
 
 .work__title {
-  margin-bottom: 1rem;
+  margin-bottom: 2.3rem;
   letter-spacing: 0.05rem;
   font-weight: 400;
   font-size: 1em;
@@ -180,7 +180,15 @@ main {
   align-self: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
+  .header {
+    grid-template-columns: [left-gutter] 1fr [content] 12fr [right-gutter] 1fr;
+  }
+  
+  .main {
+    grid-template-columns: [left-gutter] 1fr [content] 12fr [right-gutter] 1fr;
+  }
+  
   .profile {
     grid-template-areas:
       'name photo'
