@@ -17,32 +17,26 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__logo">
-        <a href="/">
-          <svg width="58.2" height="37" viewBox="0 0 58.2 37" focusable="false" aria-label="Matheus Almeida">
-            <path
-                  d="M 0.022 15.114 Q -0.132 15.882 0.79 16.189 C 1.01 16.262 11.003 10.122 16.533 8.279 C 18.196 7.588 18.299 8.663 15.918 13.424 C 15.15 15.165 13.998 17.494 13.461 18.8 Q 12.405 20.873 11.618 22.468 Q 5.815 33.104 5.628 33.468 C 5.001 34.688 3.247 35.311 6.703 37 C 8.445 36.274 11.969 31.552 15.238 28.562 C 20.056 23.854 22.842 21.164 23.598 20.489 Q 25.748 18.57 24.749 20.72 Q 21.691 26.446 21.14 30.089 C 20.3 33.645 22.138 34.159 22.983 34.082 Q 27.514 33.775 37.267 24.867 C 37.66 24.506 41.414 20.95 39.11 26.019 Q 37.651 31.548 42.028 32.008 Q 46.957 32.527 56.926 24.176 Q 57.702 23.96 57.824 23.792 C 58.397 23.001 58.302 22.077 57.54 21.718 Q 56.977 21.411 56.619 22.468 C 52.549 25.788 48.347 28.47 45.56 29.397 Q 40.832 30.702 41.414 27.478 C 42.046 23.971 47.186 16.372 50.782 10.813 Q 52.088 9.201 51.857 8.279 C 50.782 6.82 50.091 6.59 48.171 9.585 Q 39.494 19.875 33.737 24.532 Q 27.107 30.167 25.748 30.703 Q 23.048 32.149 23.674 30.165 C 24.671 27.006 27.642 20.489 30.662 16.035 Q 35.936 9.124 38.035 5.49 C 39.263 2.904 39.969 2.453 40.185 2.136 Q 40.876 0.6 39.724 0.062 C 39.225 -0.066 37.804 -0.168 37.727 1.598 C 38.035 2.366 30.584 9.788 26.362 13.732 Q 15.918 24.713 13.922 26.095 Q 12.078 27.785 12.693 26.019 Q 15.918 19.414 17.915 16.035 Q 22.369 7.588 20.551 5.49 C 19.374 4.286 17.259 5.576 14.997 6.897 L 0.022 15.114 Z"
-                  fill="#2F2F2F"></path>
-          </svg>
-        </a>
-      </h1>
-      
-      <a class="site-button site-button--header" href="blog/">Blog</a>
-      
-      <nav class="header__social">
-        <a class="social-link social-link--stack hidden-desktop fa-stack" href="blog/">
-          <i class="fas fa-square fa-stack-2x"></i>
-          <i class="fas fa-align-left fa-stack-1x color-white"></i>
-        </a>
-        <a class="social-link" href="https://twitter.com/mutheusalmeida" target="_blank">
-          <i class="fab fa-twitter fa-lg"></i>
-        </a>
-        <a class="social-link" href="https://github.com/matheusalmeida" target="_blank">
-          <i class="fab fa-github fa-lg"></i>
-        </a>
-      </nav>
+      <div class="header__wrapper">
+        <h1 class="header__logo">
+          <a href="/">
+            <svg width="58.2" height="37" viewBox="0 0 58.2 37" focusable="false" aria-label="Matheus Almeida">
+              <path
+                    d="M 0.022 15.114 Q -0.132 15.882 0.79 16.189 C 1.01 16.262 11.003 10.122 16.533 8.279 C 18.196 7.588 18.299 8.663 15.918 13.424 C 15.15 15.165 13.998 17.494 13.461 18.8 Q 12.405 20.873 11.618 22.468 Q 5.815 33.104 5.628 33.468 C 5.001 34.688 3.247 35.311 6.703 37 C 8.445 36.274 11.969 31.552 15.238 28.562 C 20.056 23.854 22.842 21.164 23.598 20.489 Q 25.748 18.57 24.749 20.72 Q 21.691 26.446 21.14 30.089 C 20.3 33.645 22.138 34.159 22.983 34.082 Q 27.514 33.775 37.267 24.867 C 37.66 24.506 41.414 20.95 39.11 26.019 Q 37.651 31.548 42.028 32.008 Q 46.957 32.527 56.926 24.176 Q 57.702 23.96 57.824 23.792 C 58.397 23.001 58.302 22.077 57.54 21.718 Q 56.977 21.411 56.619 22.468 C 52.549 25.788 48.347 28.47 45.56 29.397 Q 40.832 30.702 41.414 27.478 C 42.046 23.971 47.186 16.372 50.782 10.813 Q 52.088 9.201 51.857 8.279 C 50.782 6.82 50.091 6.59 48.171 9.585 Q 39.494 19.875 33.737 24.532 Q 27.107 30.167 25.748 30.703 Q 23.048 32.149 23.674 30.165 C 24.671 27.006 27.642 20.489 30.662 16.035 Q 35.936 9.124 38.035 5.49 C 39.263 2.904 39.969 2.453 40.185 2.136 Q 40.876 0.6 39.724 0.062 C 39.225 -0.066 37.804 -0.168 37.727 1.598 C 38.035 2.366 30.584 9.788 26.362 13.732 Q 15.918 24.713 13.922 26.095 Q 12.078 27.785 12.693 26.019 Q 15.918 19.414 17.915 16.035 Q 22.369 7.588 20.551 5.49 C 19.374 4.286 17.259 5.576 14.997 6.897 L 0.022 15.114 Z"
+                    fill="#2F2F2F"></path>
+            </svg>
+          </a>
+        </h1>
+        
+        <nav class="header__nav">
+          <a class="nav-item" href="https://github.com/mutheusalmeida" target="_blank">Github</a>
+          <a class="nav-item" href="blog/">Articles</a>
+          <a class="nav-item" href="https://twitter.com/mutheusalmeida" target="_blank">Twitter</a>
+        </nav>
+      </div>
     </header>
-    <main>
+    <main class="main">
+      <div class="main__wrapper">
       <section class="profile">
         <h1 class="profile__name">Hi, I'm Matheus Almeida</h1>
         
@@ -54,7 +48,7 @@
       <section class="work">
         <h2 class="work__title">My Recent Work</h2>
         
-        <p class="work__desc">Here you can take a look at a few recent projects I build on <a class="work-link" href="https://learn.freecodecamp.org/">freeCodeCamp</a>.<p>
+        <p class="work__desc">Here you can take a look at a few recent projects I build on <a class="site-link" href="https://learn.freecodecamp.org/">freeCodeCamp</a>.<p>
         
         <div class="work__project">
           <div class="work__browser">
@@ -122,6 +116,7 @@
           </div>
         </div>
       </section>
+        </div>
     </main>
     <footer class="footer">
       <span class="footer__author">
@@ -131,8 +126,6 @@
                 fill="#2F2F2F"></path>
         </svg>twenty nineteen
       </span>
-      
-      <a href="mailto:matheusalmeida@protonmail.com" class="site-button site-button--footer">Contact me</a>
     </footer>
   </body>
 </html>
