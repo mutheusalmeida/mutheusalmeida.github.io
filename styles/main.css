@@ -154,7 +154,7 @@ main {
 .work__project {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 400px));
-  grid-gap: 1rem 2rem;
+  grid-gap: 2rem 1rem;
   grid-template-column: minmax(auto, 700px);
   row-ga: 5rem;
 }
