@@ -36,8 +36,8 @@ body {
 .header__nav {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  column-gap: 1em;
-  justify-self: end;
+  column-gap: 20px;
+  justify-content: end;
   align-items: center;
 }
 
