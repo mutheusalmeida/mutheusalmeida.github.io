@@ -1,18 +1,18 @@
 {
-    "short_name": "Mutheus",
-    "name": "Mutheus Almeida",
+    "short_name": "Matheus",
+    "name": "Matheus Almeida",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#2f2f2f",
+    "theme_color": "#ffffff",
     "icons": [
       {
-        "src": "/images/favicon-192x192.png",
+        "src": "/images/android-chrome-192x192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/images/favicon-512x512.png",
+        "src": "/images/android-chrome-512x512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
