@@ -8,7 +8,7 @@
 .article__title {
   display: grid;
   row-gap: 1em;
-  color: gray;
+  color: #717171;
   list-style: none;
   margin: 0;
 }
@@ -17,5 +17,5 @@
   font-size: 2rem;
   font-weight: 900;
   text-decoration: none;
-  color: #2F2F2F;
+  color: #212121;
 }
