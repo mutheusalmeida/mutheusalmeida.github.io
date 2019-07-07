@@ -3,8 +3,8 @@
   "short_name": "Matheus Almeida",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "#fff",
+  "theme_color": "#fff",
   "icons": [
     {
       "src": "images/favicons/favicon-72x72.png",
