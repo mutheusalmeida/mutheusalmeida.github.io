@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #2F2F2F;
+  color: #212121;
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -42,7 +42,7 @@ body {
 }
 
 .nav-item {
-  color: #2F2F2F;
+  color: #212121;
   font-size: 0.875rem;
   text-decoration: none;
 }
@@ -52,7 +52,7 @@ body {
   height: 37px;
   align-items: center;
   color: #FFF;
-  background: #2F2F2F;
+  background: #212121;
   padding: 0 1em;
   border-radius: 4px;
 }
@@ -100,10 +100,10 @@ main {
   grid-area: button;
   background: #FFF;
   font-size: 1rem;
-  border: 1px solid #2F2F2F;
+  border: 1px solid #212121;
   padding: 1em;
   border-radius: 2px;
-  color: #2F2F2F;
+  color: #212121;
   text-decoration: none;
 }
 
@@ -164,7 +164,7 @@ main {
 
 .project-title {
   display: block;
-  color: #2F2F2F;
+  color: #212121;
   font-size: 1rem;
   margin-top: 1em;
   text-decoration: none;
