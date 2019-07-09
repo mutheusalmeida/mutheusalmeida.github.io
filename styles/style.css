@@ -57,7 +57,7 @@ body {
   align-items: center;
   padding: 0 1em;
   border-radius: 3px;
-  border: 1px solid #dadce0;
+  border: 1px solid #dde6ea;
   letter-spacing: 1px;
 }
 
@@ -108,7 +108,7 @@ main {
 
 .profile__button {
   grid-area: button;
-  border: 1px solid #dadce0;
+  border: 1px solid #dde6ea;
   font-size: 1rem;
   padding: 0 1em;
   border-radius: 3px;
@@ -138,7 +138,7 @@ main {
 }
 
 .browser {
-  border: 1px solid #dadce0;
+  border: 1px solid #dde6ea;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 2px;
@@ -152,7 +152,7 @@ main {
   padding: 0 8px;
   align-items: center;
   height: 24px;
-  border-bottom: 1px solid #dadce0;
+  border-bottom: 1px solid #dde6ea;
 }
 
 .head-button {
@@ -160,7 +160,7 @@ main {
   height: 8px;
   border-radius: 8px;
   background: #f7f7f7;
-  border: 1px solid #dadce0;
+  border: 1px solid #dde6ea;
 }
 
 .viewport-img {
