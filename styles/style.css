@@ -55,7 +55,7 @@ body {
   display: grid;
   height: 40px;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 1em;
   border-radius: 3px;
   border: 1px solid #dadce0;
   letter-spacing: 1px;
@@ -110,12 +110,12 @@ main {
   grid-area: button;
   border: 1px solid #dadce0;
   font-size: 1rem;
-  padding: 0 16px;
+  padding: 0 1em;
   border-radius: 3px;
   color: #212121;
   text-decoration: none;
   letter-spacing: 1px;
-  height: 60px;
+  height: 56px;
   display: grid;
   align-items: center;
 }
