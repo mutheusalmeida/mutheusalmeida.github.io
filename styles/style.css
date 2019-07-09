@@ -7,13 +7,14 @@ html {
 }
 
 body {
-  font-family: acumin-pro,sans-serif;
+  font-family: acumin-pro, sans-serif;
   color: #212121;
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
   align-items: start;
   min-height: 100vh;
+  text-transform: lowercase;
 }
 
 .header {
@@ -30,6 +31,8 @@ body {
 }
 
 .header__logo {
+  display: grid;
+  align-items: center;
   line-height: 0;
   margin: 0;
 }
@@ -44,17 +47,18 @@ body {
 
 .nav-item {
   color: #212121;
-  font-size: 13px;
   text-decoration: none;
+  text-transform: lowercase;
 }
 
 .nav-item--button {
   display: grid;
-  height: 37px;
+  height: 40px;
   align-items: center;
   padding: 0 16px;
   border-radius: 3px;
-  border: 1px solid #212121;
+  border: 1px solid #dadce0;
+  letter-spacing: 1px;
 }
 
 main {
@@ -71,23 +75,25 @@ main {
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-areas:
-    'name name'
+    'hello hello'
     'about about'
     'button none';
   grid-gap: 1.3em 2em;
 }
 
-.profile__name {
-  grid-area: name;
+.profile__hello {
+  grid-area: hello;
   line-height: 1.3em;
   font-size: 2.4rem;
   margin: 0;
   letter-spacing: -1px;
+  line-height: 2.3rem;
 }
 
-.test {
-  font-size: 1.6rem;
+.profile__role {
+  font-size: 1.7rem;
   font-weight: 400;
+  line-height: 1rem;
 }
 
 .profile__about {
@@ -102,21 +108,20 @@ main {
 
 .profile__button {
   grid-area: button;
-  background: #212121;
+  border: 1px solid #dadce0;
   font-size: 1rem;
   padding: 0 16px;
   border-radius: 3px;
-  color: #fff;
+  color: #212121;
   text-decoration: none;
-  text-transform: uppercase;
   letter-spacing: 1px;
-  height: 56px;
+  height: 60px;
   display: grid;
   align-items: center;
 }
 
 .work {
-  margin: 10em 0;
+  margin: 8em 0;
 }
 
 .work__title {
@@ -124,7 +129,6 @@ main {
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 1rem;
-  text-transform: uppercase;
 }
 
 .work__project {
@@ -134,7 +138,7 @@ main {
 }
 
 .browser {
-  border: 1px solid #dde6ea;
+  border: 1px solid #dadce0;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 2px;
@@ -148,7 +152,7 @@ main {
   padding: 0 8px;
   align-items: center;
   height: 24px;
-  border-bottom: 1px solid #dde6ea;
+  border-bottom: 1px solid #dadce0;
 }
 
 .head-button {
@@ -156,7 +160,7 @@ main {
   height: 8px;
   border-radius: 8px;
   background: #f7f7f7;
-  border: 1px solid #dde6ea;
+  border: 1px solid #dadce0;
 }
 
 .viewport-img {
@@ -181,7 +185,7 @@ main {
 
 .footer__author {
   display: grid;
-  font-size: 0.75rem;
+  font-size: 13px;
   justify-items: center;
   row-gap: 1em;
   letter-spacing: 1px;
@@ -198,25 +202,11 @@ main {
   }
 }
 
-@media (min-width: 63em) {
-  .profile__name {
-    /* font-size: 3.6rem; */
-  }
-  
-  .profile__about {
-    /* font-size: 1.125rem; */
-  }
-  
-  .work__project {
-    /* grid-template-columns: repeat(2, 1fr); */
-  }
-}
-
 @media (min-width: 62.4375em) {
   .header {
     grid-template-columns: [left-gutter] 1fr [content] 52em [right-gutter] 1fr;
   }
-  
+
   .main {
     grid-template-columns: [left-gutter] 1fr [content] 52em [right-gutter] 1fr;
   }
