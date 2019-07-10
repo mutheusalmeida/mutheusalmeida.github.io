@@ -37,6 +37,12 @@ body {
   margin: 0;
 }
 
+.site__brand {
+  color: #212121;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
 .header__nav {
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 9em));
@@ -57,8 +63,9 @@ body {
   align-items: center;
   padding: 0 1em;
   border-radius: 3px;
-  border: 1px solid #dde6ea;
+  border: 1px solid #212121;
   letter-spacing: 1px;
+  font-size: 1rem;
 }
 
 main {
@@ -108,8 +115,8 @@ main {
 
 .profile__button {
   grid-area: button;
-  border: 1px solid #dde6ea;
-  font-size: 1rem;
+  border: 1px solid #212121;
+  font-size: 1.1rem;
   padding: 0 1em;
   border-radius: 3px;
   color: #212121;
@@ -128,7 +135,7 @@ main {
   margin-bottom: 2em;
   letter-spacing: 1px;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .work__project {
@@ -179,17 +186,14 @@ main {
 
 .footer {
   display: grid;
+  row-gap: 1.1em;
   justify-items: center;
   padding: 2.4375em 1em;
 }
 
-.footer__author {
-  display: grid;
-  font-size: 13px;
-  justify-items: center;
-  row-gap: 1em;
+.footer span {
+  font-size: 12px;
   letter-spacing: 1px;
-  color: #212121;
 }
 
 @media (min-width: 35em) {
