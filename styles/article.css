@@ -43,9 +43,9 @@
   margin-bottom: 0.3em;
 }
 
-.post__date {
+.post__meta {
   color: #a7a7a7;
-
+  margin: 0;
 }
 
 .post__grabber {
