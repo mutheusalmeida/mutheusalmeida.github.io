@@ -1,26 +1,36 @@
-.work__article {
+.work__articles {
   display: grid;
   row-gap: 2em;
   margin: 0;
   padding: 0;
 }
 
-.article__title {
+.article {
   display: grid;
-  row-gap: 1em;
+  row-gap: 0.3em;
   list-style: none;
   margin: 0;
 }
 
-.article__title span {
-  color: #717171;
+.article__title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0;
 }
 
 .article__link {
-  font-size: 2rem;
-  font-weight: 700;
   text-decoration: none;
   color: #212121;
+}
+
+.article__link:hover {
+  text-decoration: underline;
+}
+
+.article__date {
+  margin: 0;
+  color: #a7a7a7;
 }
 
 .post {
@@ -29,16 +39,17 @@
 
 .post__title {
   font-size: 2.4rem;
-  margin: 0;
+  letter-spacing: -1px;
+  margin-bottom: 0.3em;
 }
 
 .post__date {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #717171;
+  color: #a7a7a7;
+
 }
 
-.post__desc {
-  font-size: 1.4rem;
-  margin-bottom: 2em;
+.post__grabber {
+  font-size: 1.2rem;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
