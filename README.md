@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://matheusalmeida.design">
-    <img src="https://user-images.githubusercontent.com/34585988/60056167-faa2e980-96ad-11e9-9681-ab1f171191c9.png" alt="Matheus' logo">
+    <img src="https://user-images.githubusercontent.com/34585988/61099241-a3cc3c80-a42f-11e9-8b3f-be5e80e55d25.png" alt="Matheus' logo">
   </a>
 </p>
 
