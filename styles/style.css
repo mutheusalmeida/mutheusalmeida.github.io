@@ -1,3 +1,5 @@
+@import url('https://rsms.me/inter/inter.css');
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -7,7 +9,7 @@ html {
 }
 
 body {
-  font-family: acumin-pro, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   color: #212121;
   margin: 0;
   display: grid;
@@ -39,6 +41,7 @@ body {
 
 .site-brand {
   color: #212121;
+  font-family: acumin-pro, system-ui, sans-serif;
   text-decoration: none;
 }
 
@@ -47,6 +50,7 @@ body {
   grid-template-columns: repeat(3, minmax(auto, 9em));
   justify-content: end;
   justify-items: end;
+  font-weight: 500;
   align-items: center;
 }
 
@@ -58,13 +62,12 @@ body {
 
 .nav-item--button {
   display: grid;
-  height: 40px;
+  height: 38px;
   align-items: center;
-  padding: 0 1em;
-  border-radius: 3px;
+  padding: 0 0.875em;
+  border-radius: 4px;
   border: 1px solid #212121;
   letter-spacing: 1px;
-  font-size: 1rem;
 }
 
 .main {
@@ -89,6 +92,7 @@ body {
 
 .profile__hello {
   grid-area: hello;
+  font-family: acumin-pro, system-ui, sans-serif;
   line-height: 1.3em;
   font-size: 2.4rem;
   margin: 0;
@@ -104,26 +108,39 @@ body {
 
 .profile__about {
   font-size: 1rem;
-  line-height: 1.6em;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5em;
   grid-area: about;
   margin: 0;
-  max-width: 27em;
+  max-width: 30em;
   hyphens: auto;
   word-break: break-word;
 }
 
 .profile__button {
   grid-area: button;
-  border: 1px solid #212121;
-  font-size: 1.1rem;
   padding: 0 1em;
-  border-radius: 3px;
+  border-radius: 4px;
   color: #212121;
   text-decoration: none;
   letter-spacing: 1px;
-  height: 56px;
+  height: 48px;
   display: grid;
   align-items: center;
+}
+
+.profile__button {
+  background-color: #212121;
+  color: #fff;
+}
+
+.profile__button:hover {
+  background-color: #181717;
+  transition: background-color .3s;
+}
+
+.profile__button:active {
+  box-shadow: 0 0 0 1px #181717;
 }
 
 .work {
@@ -133,7 +150,7 @@ body {
 .work__title {
   margin-bottom: 2em;
   letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.1rem;
 }
 
@@ -198,6 +215,7 @@ body {
 
 .footer__author {
   font-size: 1.16rem;
+  font-family: acumin-pro, system-ui, sans-serif;
   margin: 0;
 }
 
