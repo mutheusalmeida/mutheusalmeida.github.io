@@ -60,12 +60,6 @@ body {
   text-transform: lowercase;
 }
 
-.nav-item--button {
-  display: grid;
-  height: 38px;
-  align-items: center;
-}
-
 .main {
   display: grid;
   grid-template-columns: [left-gutter] 1em [content] 10fr [right-gutter] 1em;
