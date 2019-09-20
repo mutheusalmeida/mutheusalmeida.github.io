@@ -39,15 +39,10 @@ body {
   margin: 0;
 }
 
-.site-brand {
+.site-logo {
   color: #212121;
   font-family: acumin-pro, system-ui, sans-serif;
   text-decoration: none;
-}
-
-.site-brand:hover {
-  color: rgb(33, 33, 33, .9);
-  transition: color .3s;
 }
 
 .header__nav {
@@ -69,15 +64,6 @@ body {
   display: grid;
   height: 38px;
   align-items: center;
-  padding: 0 0.875em;
-  border-radius: 4px;
-  background-color: #2121210c;
-  letter-spacing: 1px;
-}
-
-.nav-item--button:hover {
-  color: rgb(33, 33, 33, .9);
-  transition: color .3s;
 }
 
 .main {
@@ -133,7 +119,6 @@ body {
   border-radius: 4px;
   color: #212121;
   text-decoration: none;
-  letter-spacing: 1px;
   height: 48px;
   display: grid;
   align-items: center;
