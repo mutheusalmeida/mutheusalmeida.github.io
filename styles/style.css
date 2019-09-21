@@ -111,25 +111,22 @@ body {
   grid-area: button;
   padding: 0 1em;
   border-radius: 4px;
-  color: #212121;
+  background-color: #212121;
+  color: #fff;
   text-decoration: none;
+  outline: none;
   height: 48px;
   display: grid;
   align-items: center;
 }
 
-.profile__button {
-  background-color: #212121;
-  color: #fff;
-}
-
 .profile__button:hover {
-  background-color: #1a1a1a;
-  transition: background-color .3s;
+  opacity: .9;
+  transition: .3s opacity ease-out;
 }
 
 .profile__button:active {
-  box-shadow: 0 0 0 1px #181717;
+  box-shadow: 0 0 0 1px #212121;
 }
 
 .work {
