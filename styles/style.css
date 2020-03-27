@@ -10,10 +10,6 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   color: #212121;
   margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  align-items: start;
-  min-height: 100vh;
   text-transform: lowercase;
 }
 
@@ -24,7 +20,6 @@ body {
 }
 
 .header__wrapper {
-  grid-area: content;
   display: grid;
   grid-template-columns: min-content 1fr;
   column-gap: 1em;
@@ -69,10 +64,6 @@ body {
   display: grid;
   grid-template-columns: [left-gutter] 1em [content] 10fr [right-gutter] 1em;
   padding: 2em 0;
-}
-
-.main__wrapper {
-  grid-area: content;
 }
 
 .profile {
