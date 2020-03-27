@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: Inter, sans-serif;
   color: #212121;
@@ -33,7 +37,7 @@ body {
 .header__logo {
   display: grid;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   margin: 0;
 }
 
@@ -83,7 +87,6 @@ body {
   font-size: 1.4rem;
   font-weight: 500;
   margin: 0;
-  letter-spacing: -1px;
   line-height: 2.3rem;
 }
 
