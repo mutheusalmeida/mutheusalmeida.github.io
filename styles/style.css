@@ -2,14 +2,14 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 100%;
-}
-
 body {
   font-family: Inter, sans-serif;
   color: #212121;
   margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  min-height: 100vh;
   text-transform: lowercase;
 }
 
