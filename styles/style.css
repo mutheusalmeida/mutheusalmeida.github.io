@@ -3,12 +3,12 @@
 }
 
 html {
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  color: #212121;
+  font-size: 17px;
 }
 
 body {
+  font-family: Inter, sans-serif;
+  color: #212121;
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -51,7 +51,7 @@ body {
 }
 
 .header__logo a:hover {
-  color: #6b6b6b;
+  opacity: .8;
 }
 
 .header__nav {
@@ -65,8 +65,13 @@ body {
 
 .nav-item {
   color: #212121;
+  opacity: .8;
   text-decoration: none;
   text-transform: lowercase;
+}
+
+.nav-item:hover {
+  opacity: 1;
 }
 
 .main {
@@ -83,7 +88,7 @@ body {
 
 .profile__hello {
   grid-area: 2 / 1 / 3 / 2;
-  font-family: acumin-pro, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 22.4px;
   font-weight: 500;
   margin: 0;
@@ -98,12 +103,14 @@ body {
 
 .profile__role {
   font-size: 39.36px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .profile__about {
+  font-family: 'Lora', serif;
   grid-area: 3 / 1 / 4 / 2;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
   line-height: 1.9em;
   margin: 0;
   max-width: 30em;
@@ -113,11 +120,12 @@ body {
 
 .profile__button {
   grid-area: 4 / 1 / 5 / 2;
+  font-size: 1.2rem;
   width: fit-content;
   padding: 0 1em;
   border-radius: 4px;
-  background-color: #212121;
-  color: #fff;
+  border: 1px solid rgb(33, 33, 33, .2);
+  color: #212121;
   text-decoration: none;
   outline: none;
   height: 48px;
@@ -126,12 +134,8 @@ body {
 }
 
 .profile__button:hover {
-  opacity: .9;
-  transition: .3s opacity ease-out;
-}
-
-.profile__button:active {
-  box-shadow: 0 0 0 1px #212121;
+  background-color: #f1f1f1;
+  transition: all .3s ease-out;
 }
 
 .profile__illustr {
@@ -147,7 +151,7 @@ body {
 
 .work__title {
   margin-bottom: 2em;
-  letter-spacing: 1px;
+  letter-spacing: .7px;
   font-weight: 500;
   font-size: 1.1rem;
 }
@@ -211,7 +215,7 @@ body {
 }
 
 .footer__author {
-  font-size: 1.16rem;
+  font-size: 24px;
   font-family: acumin-pro, sans-serif;
   margin: 0;
 }
