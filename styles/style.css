@@ -51,7 +51,7 @@ body {
 }
 
 .header__logo a:hover {
-  opacity: .8;
+  color: #4f4f4f;
 }
 
 .header__nav {
@@ -65,13 +65,13 @@ body {
 }
 
 .nav-item {
-  color: #2c2c2c;
+  color: #4f4f4f;
   text-decoration: none;
   text-transform: lowercase;
 }
 
 .nav-item:hover {
-  opacity: .8;
+  color: #2c2c2c;
 }
 
 .main {
