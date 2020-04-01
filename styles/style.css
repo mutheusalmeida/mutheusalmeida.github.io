@@ -58,7 +58,7 @@ body {
 }
 
 .nav-item {
-  color: #212121;
+  color: #000;
   transform: translateY(2.5px);
   font-size: 17.5px;
   text-decoration: none;
@@ -87,7 +87,7 @@ body {
 .profile__about {
   grid-area: 3 / 1 / 4 / 2;
   font-size: 17.5px;
-  opacity: .8;
+  opacity: .9;
   /* color: #2121219e; */
   /* color: #585d6d; */
   line-height: 1.9em;
@@ -105,9 +105,8 @@ body {
   padding: 0 1em;
   text-transform: none;
   border-radius: 4px;
-  border: 2px solid #000;
-  color: #212121;
-  font-weight: 600;
+  border: 2px solid #212121;
+  color: #000;
   text-decoration: none;
   height: 58px;
   display: grid;
