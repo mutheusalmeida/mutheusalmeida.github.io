@@ -187,7 +187,6 @@ body {
 
 .mockup__img {
   display: block;
-  border: 2px solid #212121;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -195,7 +194,6 @@ body {
 
 .browser__img {
   display: block;
-  border: 2px solid #212121;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
