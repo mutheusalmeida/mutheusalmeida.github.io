@@ -49,6 +49,10 @@ body {
   position: absolute;
 }
 
+.header__logo a:hover {
+  opacity: .8;
+}
+
 .header__nav {
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 9em));
@@ -59,9 +63,14 @@ body {
 
 .nav-item {
   color: #000;
+  opacity: .8;
   transform: translateY(2.5px);
   font-size: 17.5px;
   text-decoration: none;
+}
+
+.nav-item:hover {
+  opacity: 1;
 }
 
 .main {
@@ -105,16 +114,21 @@ body {
   padding: 0 1em;
   text-transform: none;
   border-radius: 4px;
-  background-color: #212121;
-  color: #fff;
+  border: 2px solid #212121;
+  color: #000;
   text-decoration: none;
   height: 58px;
   display: grid;
   align-items: center;
 }
 
+.profile__button:active {
+  border: #fff;
+}
+
 .profile__illustr {
   grid-area: 1 / 1 / 2 / 2;
+  display: flex;
   width: min-content;
   align-self: center;
   justify-self: center;
@@ -122,6 +136,7 @@ body {
 
 .profile__illustr path {
   stroke: #000;
+  stroke-width: .1;
 }
 
 .work {
