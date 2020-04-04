@@ -215,7 +215,8 @@ body {
 }
 
 .project__title {
-  font-size: 14px;
+  display: none;
+  font-size: 16px;
   color: #000;
   font-weight: 500;
   margin: 4px 0 0;
@@ -224,6 +225,7 @@ body {
 
 .project__date {
   display: block;
+  display: none;
   font-size: 14px;
   opacity: .8;
   transform: translateY(-3px);
