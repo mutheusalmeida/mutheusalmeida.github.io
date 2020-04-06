@@ -250,6 +250,7 @@ body {
   align-items: center;
   height: 25px;
   border: 1px solid rgb(33, 33, 33, .1);
+  border-bottom: none;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
@@ -257,11 +258,11 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 8px;
-  border: 1px solid rgb(33, 33, 33, .4);
+  border: 2px solid rgb(33, 33, 33, .4);
 }
 .browser__img {
   display: block;
-  border: 1px solid rgb(33, 33, 33, .1);
+  border: 1px solid rgb(0, 0, 0, .1);
   border-top: none;
   max-width: 100%;
   height: auto;
