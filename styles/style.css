@@ -249,7 +249,7 @@ body {
   padding: 0 16px;
   align-items: center;
   height: 25px;
-  border: 1px solid rgb(33, 33, 33, .1);
+  border: 2px solid rgb(33, 33, 33, .2);
   border-bottom: none;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
@@ -262,7 +262,7 @@ body {
 }
 .browser__img {
   display: block;
-  border: 1px solid rgb(0, 0, 0, .1);
+  border: 2px solid rgb(33, 33, 33, .2);
   border-top: none;
   max-width: 100%;
   height: auto;
@@ -273,7 +273,7 @@ body {
 .work__wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 24.87597em));
-  grid-gap: 36px;
+  grid-gap: 30px;
 }
 
 @media screen and (min-width: 35em) {
