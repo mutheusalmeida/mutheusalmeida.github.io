@@ -260,7 +260,7 @@ body {
 }
 .browser__img {
   display: block;
-  border: 2px solid #212121;
+  border: 3px solid #212121;
   max-width: 100%;
   height: auto;
   border-bottom-right-radius: 4px;
