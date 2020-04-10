@@ -200,8 +200,6 @@ body {
 }
 
 .browser__desc {
-  display: flex;
-  padding: 0 16px;
 }
 
 .project__title {
@@ -212,11 +210,10 @@ body {
   text-decoration: none;
 }
 
-.project__date {
-  margin-left: auto;
+.browser__desc p {
+  margin: 4px 0 auto;
   font-size: 13px;
   opacity: .8;
-  transform: translateY(5px);
 }
 
 .footer {
