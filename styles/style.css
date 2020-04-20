@@ -65,7 +65,7 @@ body {
 }
 
 .nav-item {
-  color: #000;
+  color: #212121;
   opacity: .8;
   transform: translateY(2.5px);
   font-size: 1.094rem;
@@ -89,7 +89,7 @@ body {
 .about {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.3em 2em;
+  row-gap: .5em;
 }
 
 .about__title {
@@ -98,15 +98,15 @@ body {
   font-weight: 600;
   grid-row: 2 / 2;
   margin: 0;
-  line-height: 3rem;
+  line-height: 2.8rem;
 }
 
 .about__grabber {
   grid-row: 3 / 3;
   font-size: 1.094rem;
   opacity: .8;
-  line-height: 1.9em;
-  margin: 0;
+  line-height: 1.7em;
+  margin: .5em 0;
   hyphens: auto;
   word-break: break-word;
 }
@@ -137,7 +137,7 @@ body {
 }
 
 .work {
-  margin: 10em 0;
+  margin: 8em 0;
 }
 
 .work__wrapper {
@@ -171,10 +171,9 @@ body {
 }
 
 .project__info {
-  margin: 4px 0 auto;
+  margin: 0;
   font-size: .813rem;
   opacity: .5;
-  transform: translateY(-6px);
 }
 
 .footer {
@@ -220,7 +219,7 @@ body {
 
   .about__title {
     font-size: 3rem;
-    line-height: 3.7rem;
+    line-height: 3.4rem;
   }
 }
 
