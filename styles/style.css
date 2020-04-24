@@ -160,6 +160,11 @@ body {
   background-color: #f4ede5;
 }
 
+.work__wrapper .project:nth-child(3) .project__img {
+  border-radius: 9px;
+  box-shadow: 0px 0px 10px 5px #e5dfd8;
+}
+
 .work__wrapper .project:nth-child(4) {
   background-color: #e5e4e7;
 }
