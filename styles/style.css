@@ -120,7 +120,6 @@ body {
 
 .work__wrapper {
   display: grid;
-  row-gap: 36px;
 }
 
 .work__title {
@@ -132,6 +131,9 @@ body {
 }
 
 .project {
+  display: flex;
+  flex-direction: column;
+  padding: 8vw;
   text-transform: lowercase;
 }
 
@@ -146,20 +148,54 @@ body {
 }
 
 .project__title {
-  font-size: .875rem;
-  font-weight: 400;
-  margin: 4px 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1em 0 0;
 }
 
 .project__title a {
-  color: #000;
   text-decoration: none;
 }
 
 .project__info {
   margin: 0;
   font-size: .813rem;
-  opacity: .5;
+}
+
+.work__wrapper .project:nth-child(1) {
+  background-color: #212225;
+  color: #fff;
+}
+
+.work__wrapper .project:nth-child(1) a {
+  color: #fff;
+}
+
+.work__wrapper .project:nth-child(2) {
+  background-color: #ece6e4;
+  color: #212121;
+}
+
+.work__wrapper .project:nth-child(2) a {
+  color: #212121;
+}
+
+.work__wrapper .project:nth-child(3) {
+  background-color: #e0e1e9;
+  color: #212121;
+}
+
+.work__wrapper .project:nth-child(3) a {
+  color: #212121;
+}
+
+.work__wrapper .project:nth-child(4) {
+  background-color: #eeedef;
+  color: #212121;
+}
+
+.work__wrapper .project:nth-child(4) a {
+  color: #212121;
 }
 
 .footer {
@@ -206,5 +242,13 @@ body {
   .about__me {
     grid-area: 1 / 1 / 6 / 1;
     justify-self: right;
+  }
+
+  .work__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project {
+    padding: 3vw;
   }
 }
