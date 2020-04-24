@@ -139,63 +139,29 @@ body {
 
 .project__img {
   display: block;
+  align-self: center;
   max-width: 100%;
   height: auto;
 }
 
-.project__img:hover {
+.project:hover {
   opacity: .75;
-}
-
-.project__title {
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 1em 0 0;
-}
-
-.project__title a {
-  text-decoration: none;
-}
-
-.project__info {
-  margin: 0;
-  font-size: .813rem;
 }
 
 .work__wrapper .project:nth-child(1) {
   background-color: #212225;
-  color: #fff;
-}
-
-.work__wrapper .project:nth-child(1) a {
-  color: #fff;
 }
 
 .work__wrapper .project:nth-child(2) {
-  background-color: #ece6e4;
-  color: #212121;
-}
-
-.work__wrapper .project:nth-child(2) a {
-  color: #212121;
+  background-color: #eeedef;
 }
 
 .work__wrapper .project:nth-child(3) {
-  background-color: #e0e1e9;
-  color: #212121;
-}
-
-.work__wrapper .project:nth-child(3) a {
-  color: #212121;
+  background-color: #f4ede5;
 }
 
 .work__wrapper .project:nth-child(4) {
-  background-color: #eeedef;
-  color: #212121;
-}
-
-.work__wrapper .project:nth-child(4) a {
-  color: #212121;
+  background-color: #e5e4e7;
 }
 
 .footer {
