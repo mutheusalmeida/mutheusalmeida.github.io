@@ -120,6 +120,7 @@ body {
 
 .work__wrapper {
   display: grid;
+  gap: 36px;
 }
 
 .work__title {
@@ -157,12 +158,7 @@ body {
 }
 
 .work__wrapper .project:nth-child(3) {
-  background-color: #f4ede5;
-}
-
-.work__wrapper .project:nth-child(3) .project__img {
-  border-radius: 9px;
-  box-shadow: 0px 0px 10px 5px #e5dfd8;
+  background-color: #ece6e4;
 }
 
 .work__wrapper .project:nth-child(4) {
