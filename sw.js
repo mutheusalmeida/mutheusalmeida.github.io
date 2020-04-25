@@ -1,10 +1,11 @@
-const cacheName = 'mutheus-v1.0';
+const cacheName = 'static-v1.0';
 const expectedCaches = [
     cacheName
 ];
 const staticCache = [
     '/',
-    '/styles/style.css',
+    'styles/style.css',
+    'https://use.typekit.net/tlq2ejl.css'
 ];
 
 self.addEventListener('install', (event) => {
