@@ -3,7 +3,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 100%;
 }
 
 body {
@@ -139,7 +139,6 @@ body {
 .project {
   display: flex;
   flex-direction: column;
-  padding: 8vw;
   max-width: 450px;
   text-transform: lowercase;
 }
@@ -148,6 +147,8 @@ body {
   display: block;
   align-self: center;
   max-width: 100%;
+  border: 3px solid #111;
+  border-radius: 4px;
   height: auto;
 }
 
@@ -156,7 +157,7 @@ body {
 }
 
 .work__wrapper .project:nth-child(1) {
-  background-color: #212225;
+  background-color: #E5E5E5;
 }
 
 .work__wrapper .project:nth-child(2) {
@@ -173,6 +174,8 @@ body {
 
 .footer {
   text-align: center;
+  display: grid;
+  gap: .5em;
   padding: 2.5em 1em;
 }
 
@@ -203,10 +206,6 @@ body {
     font-size: 3rem;
     line-height: 3.4rem;
   }
-
-  .project {
-    padding: 7vw;
-  }
 }
 
 @media screen and (min-width: 45em) {
@@ -218,16 +217,9 @@ body {
     grid-area: 1 / 1 / 6 / 1;
     justify-self: right;
   }
-
-  .project {
-    padding: 6vw;
-  }
 }
 
 @media screen and (min-width: 50em) {
-  .project {
-    padding: 5vw;
-  }
 }
 
 @media screen and (min-width: 65em) {
@@ -237,6 +229,5 @@ body {
 
   .project {
     max-width: initial;
-    padding: 4vw;
   }
 }
