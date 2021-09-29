@@ -140,6 +140,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 450px;
+  padding: 4vw;
   text-transform: lowercase;
 }
 
@@ -147,7 +148,6 @@ body {
   display: block;
   align-self: center;
   max-width: 100%;
-  border: 2px solid #111;
   border-radius: 4px;
   height: auto;
 }
@@ -157,15 +157,15 @@ body {
 }
 
 .work__wrapper .project:nth-child(1) {
-  background-color: #E5E5E5;
+  background-color: #e8f1f3;
 }
 
 .work__wrapper .project:nth-child(2) {
-  background-color: #eeedef;
+  background-color: #3b3b3b;
 }
 
 .work__wrapper .project:nth-child(3) {
-  background-color: #ece6e4;
+  background-color: #d3d3d5;
 }
 
 .work__wrapper .project:nth-child(4) {
