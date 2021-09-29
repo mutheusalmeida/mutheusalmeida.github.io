@@ -140,7 +140,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 450px;
-  padding: 4vw;
+  padding: 8vw;
   text-transform: lowercase;
 }
 
@@ -217,9 +217,16 @@ body {
     grid-area: 1 / 1 / 6 / 1;
     justify-self: right;
   }
+
+  .project {
+    padding: 6vw;
+  }
 }
 
 @media screen and (min-width: 50em) {
+  .project {
+    padding: 4vw;
+  }
 }
 
 @media screen and (min-width: 65em) {
@@ -229,5 +236,6 @@ body {
 
   .project {
     max-width: initial;
+    padding: 2vw;
   }
 }
