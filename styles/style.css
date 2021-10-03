@@ -157,7 +157,7 @@ body {
 }
 
 .work__wrapper .project:nth-child(1) {
-  background-color: #e8f1f3;
+  background-color: #abbfc1;
 }
 
 .work__wrapper .project:nth-child(2) {
@@ -236,6 +236,6 @@ body {
 
   .project {
     max-width: initial;
-    padding: 2vw;
+    padding: 4vw;
   }
 }
