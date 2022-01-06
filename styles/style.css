@@ -157,19 +157,19 @@ body {
 }
 
 .work__wrapper .project:nth-child(1) {
-  background-color: #abbfc1;
+  background-color: #353454;
 }
 
 .work__wrapper .project:nth-child(2) {
-  background-color: #3b3b3b;
+  background-color: #c5c5c5;
 }
 
 .work__wrapper .project:nth-child(3) {
-  background-color: #d3d3d5;
+  background-color: #abbfc1;
 }
 
 .work__wrapper .project:nth-child(4) {
-  background-color: #e5e4e7;
+  background-color: #3b3b3b;
 }
 
 .footer {
