@@ -55,7 +55,7 @@ body {
 }
 
 .site-logo {
-  font-size: 6rem;
+  font-size: 3rem;
   margin: 0 0 1em;
   line-height: 1em;
   font-family: acumin-pro, sans-serif;
@@ -137,4 +137,10 @@ body {
   font-size: .75rem;
   letter-spacing: 1px;
   margin: 0;
+}
+
+@media (min-width: 38em) {
+  .about .site-logo {
+    font-size: 6rem;
+  }
 }
