@@ -2,6 +2,7 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "strict": true,
+    "types": ["@astrojs/image/client"],
     "typeRoots": [
       "./node_modules/@types",
       "./src/@types"

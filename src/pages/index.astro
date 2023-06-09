@@ -1,8 +1,47 @@
 ---
-import { Home } from '@/components/home'
 import Layout from '@/layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import logo from '@/assets/logo.jpg'
 ---
 
-<Layout title="Hello, world">
-  <Home client:load />
+<Layout title="Matheus Almeida &nbsp;–&nbsp; Front-End Developer">
+  <header class="header">
+    <h1 class="header__logo" aria-label="Website logo">
+      <a href="/">
+        <Image
+          src={logo}
+          alt="Matheus Almeida's icon"
+          width={33}
+          height={33}
+        />
+
+        <span>Matheus Almeida</span>
+      </a>
+    </h1>
+  </header>
 </Layout>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5em 12em;
+    font-family: var(--font-family-primary);
+    text-transform: lowercase;
+  }
+
+  .header__logo {
+    font-size: var(--font-size-20);
+
+    & a {
+      display: flex;
+      gap: 0.8em;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    & img {
+      border-radius: var(--border-radius-sm);
+    }
+  }
+</style>

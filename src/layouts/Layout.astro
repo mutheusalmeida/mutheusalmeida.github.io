@@ -2,10 +2,10 @@
 import '@/styles/global.css'
 
 type Props = {
-	title: string;
+	title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -14,10 +14,34 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-		<meta name="description" content="My website">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content="Front-end developer, UI developer, or UI engineer, interested in clean code, simple/usable design and creative coding.">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://use.typekit.net/tlq2ejl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
+
+<style>
+  :root {
+    --base-unit: 0.5rem;
+    --line-height-base-unit: 1;
+    --dark: #2c2c2c;
+    --gray:#rgba(112, 112, 112, 0.68);
+    --white: #fff;
+    --font-family-primary: acumin-pro, system-ui, sans-serif;
+    --font-family-secondary: 'Inter', system-ui, sans-serif;
+    --font-size-14: calc(var(--base-unit) * 1.75);
+    --font-size-16: calc(var(--base-unit) * 2);
+    --font-size-20: calc(var(--base-unit) * 2.5);
+    --line-height-md: calc(var(--line-height-base-unit) * 1.1428);
+    --border-radius-sm: 0.25em;
+  }
+</style>
