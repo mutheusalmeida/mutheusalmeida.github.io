@@ -1,5 +1,5 @@
 ---
-import '@/styles/global.css'
+import '@/styles/reset.css'
 
 type Props = {
 	title: string
@@ -34,14 +34,21 @@ const { title } = Astro.props
     --base-unit: 0.5rem;
     --line-height-base-unit: 1;
     --dark: #2c2c2c;
-    --gray:#rgba(112, 112, 112, 0.68);
+    --gray: rgba(112, 112, 112, 0.68);
     --white: #fff;
-    --font-family-primary: acumin-pro, system-ui, sans-serif;
-    --font-family-secondary: 'Inter', system-ui, sans-serif;
+    --font-family-primary: 'Inter', system-ui, sans-serif;
+    --font-family-secondary: acumin-pro, system-ui, sans-serif;
     --font-size-14: calc(var(--base-unit) * 1.75);
     --font-size-16: calc(var(--base-unit) * 2);
-    --font-size-20: calc(var(--base-unit) * 2.5);
+    --font-size-20: clamp(1rem, 0.5vw + 0.8017rem, 1.25rem);
+    --line-height-sm: calc(var(--line-height-base-unit) * 1.1111);
     --line-height-md: calc(var(--line-height-base-unit) * 1.1428);
     --border-radius-sm: 0.25em;
+  }
+
+  body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-16);
+    color: var(--dark);
   }
 </style>
