@@ -69,13 +69,13 @@ import logo from '@/assets/logo.jpg'
 
   .nav {
     display: flex;
-    justify-self: end;
+    justify-self: flex-end;
     align-items: center;
   }
 
   .nav__list {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex-wrap: wrap;
     padding: 0;
     gap: 0.4375em 1.2em;
@@ -96,6 +96,10 @@ import logo from '@/assets/logo.jpg'
 
       & a.active {
         color: var(--dark);
+
+        @media (prefers-color-scheme: dark) {
+          color: var(--white);
+        }
       }
     }
   }

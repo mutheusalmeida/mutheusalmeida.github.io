@@ -57,6 +57,13 @@ const { title } = Astro.props
     color: var(--dark);
   }
 
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--dark);
+      color: var(--white);
+    }
+  }
+
   .lowercase-title {
     text-transform: lowercase;
   }
