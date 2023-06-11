@@ -7,10 +7,10 @@ import Layout from '@/layouts/Layout.astro'
   <Header />
 
   <main class="content-wrapper">
-    <section class="hero">
-      <h2 class="hero__title">Matheus Almeida</h2>
+    <section>
+      <h2 class="hero-title lowercase-title">Matheus Almeida</h2>
 
-      <div class="hero__desc">
+      <div class="hero-desc">
         <p>I'm a front-end developer based in Manaus, Brazil. I'm interested in clean code, simple/usable design and creative coding.</p>
 
         <p>I'm currently looking for new opportunities to grow as a developer.</p>
@@ -19,22 +19,22 @@ import Layout from '@/layouts/Layout.astro'
       </div>
     </section>
 
-    <section class="experience">
-      <h3 class="experience__title lowercase-title">Experience</h3>
+    <section>
+      <h3 class="experience-title lowercase-title">Experience</h3>
 
-      <ul role="list" class="experience__list">
-        <li class="experience__item">
-          <div>
+      <ul role="list" class="experience-list">
+        <li class="experience-list__item">
+          <div class="experience-list__content">
             <small>may 2022 - april 2023</small>
 
-            <h4>Font-end developer @ Desenrolado</h4>
+            <h4>Font-end developer @ <a href="#">Desenrolado</a></h4>
           </div>
         </li>
-        <li class="experience__item">
-          <div>
+        <li class="experience-list__item">
+          <div class="experience-list__content">
             <small>jan 2022 - nov 2022</small>
 
-            <h4>Font-end developer @ Kolabs</h4>
+            <h4>Font-end developer @ <a href="#">Kolabs</a></h4>
           </div>
         </li>
       </ul>
@@ -47,28 +47,57 @@ import Layout from '@/layouts/Layout.astro'
     display: flex;
     flex-direction: column;
     gap: 6em;
-    padding: max(min(6rem, calc((100% - 22.5rem) / 8)), 2.75rem) 0;
-    width: min(90vw, 41.5625em);
+    padding: var(--spacing-96) 1em;
+    width: min(90vw, var(--spacing-content));
     margin-inline: auto;
   }
 
-  .hero__title {
+  .hero-title {
     font-family: var(--font-family-secondary);
-    text-transform: lowercase;
     font-size: var(--font-size-20);
     line-height: var(--line-height-md);
     margin-bottom: 2.2em;
   }
 
-  .hero__desc {
+  .hero-desc {
     & p:not(:last-child) {
       margin-bottom: 2em;
     }
   }
 
-  .experience__title {
+  .experience-title {
     font-size: var(--font-size-32);
     line-height: var(--line-height-md);
     margin-bottom: 1.375em;
+  }
+
+  .experience-list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .experience-list__item {
+    list-style: none;
+  }
+
+  .experience-list__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-family: var(--font-family-secondary);
+
+    & small {
+      color: var(--gray);
+      font-size: var(--font-size-14);
+      line-height: var(--line-height-md);
+      font-weight: 700;
+    }
+
+    & h4 {
+      font-size: var(--font-size-20);
+      line-height: var(--line-height-sm);
+    }
   }
 </style>
