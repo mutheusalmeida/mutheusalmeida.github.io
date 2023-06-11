@@ -29,7 +29,7 @@ const { title } = Astro.props
 	</body>
 </html>
 
-<style>
+<style is:global>
   :root {
     --base-unit: 0.5rem;
     --line-height-base-unit: 1;
@@ -41,6 +41,7 @@ const { title } = Astro.props
     --font-size-14: calc(var(--base-unit) * 1.75);
     --font-size-16: calc(var(--base-unit) * 2);
     --font-size-20: clamp(1rem, 0.5vw + 0.8017rem, 1.25rem);
+    --font-size-32: clamp(1.25rem, 1.5vw + 0.65rem, 2rem);
     --line-height-sm: calc(var(--line-height-base-unit) * 1.1111);
     --line-height-md: calc(var(--line-height-base-unit) * 1.1428);
     --border-radius-sm: calc(var(--base-unit) * 0.375);
@@ -50,5 +51,9 @@ const { title } = Astro.props
     font-family: var(--font-family-primary);
     font-size: var(--font-size-16);
     color: var(--dark);
+  }
+
+  .lowercase-title {
+    text-transform: lowercase;
   }
 </style>

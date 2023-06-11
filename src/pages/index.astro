@@ -1,105 +1,74 @@
 ---
+import Header from '@/components/Header.astro'
 import Layout from '@/layouts/Layout.astro'
-import { Image } from 'astro:assets'
-import logo from '@/assets/logo.jpg'
 ---
 
 <Layout title="Matheus Almeida &nbsp;–&nbsp; Front-End Developer">
-  <header class="header">
-    <h1 class="header__logo" aria-label="Homepage">
-      <a href="/">
-        <Image
-          src={logo}
-          alt="Matheus Almeida's icon"
-          width={20}
-          height={20}
-        />
+  <Header />
 
-        <span>Matheus Almeida</span>
-      </a>
-    </h1>
+  <main class="content-wrapper">
+    <section class="hero">
+      <h2 class="hero__title">Matheus Almeida</h2>
 
-    <nav class="nav" aria-label="Main navigation">
-      <ul role="list" class="nav__list">
-        <li class="nav__item">
-          <a href="/articles">Articles</a>
+      <div class="hero__desc">
+        <p>I'm a front-end developer based in Manaus, Brazil. I'm interested in clean code, simple/usable design and creative coding.</p>
+
+        <p>I'm currently looking for new opportunities to grow as a developer.</p>
+
+        <p>Previously, I worked at <a href="#">Desenrolado</a>, where I built 18 interactive activities for school children. Before that, I worked at <a href="#">Kolabs</a>, built the company's landing page and led their UI development projects.</p>
+      </div>
+    </section>
+
+    <section class="experience">
+      <h3 class="experience__title lowercase-title">Experience</h3>
+
+      <ul role="list" class="experience__list">
+        <li class="experience__item">
+          <div>
+            <small>may 2022 - april 2023</small>
+
+            <h4>Font-end developer @ Desenrolado</h4>
+          </div>
         </li>
-        <li class="nav__item">
-          <a href="https://github.com/mutheusalmeida">GitHub</a>
-        </li>
-        <li class="nav__item">
-          <a href="https://codepen.io/matheusalmeida">CodePen</a>
-        </li>
-        <li class="nav__item nav__item--lang">
-          <a href="/pt-BR">PT</a> / <a class="active" href="/en">EN</a>
+        <li class="experience__item">
+          <div>
+            <small>jan 2022 - nov 2022</small>
+
+            <h4>Font-end developer @ Kolabs</h4>
+          </div>
         </li>
       </ul>
-    </nav>
-  </header>
+    </section>
+  </main>
 </Layout>
 
 <style>
-  .header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1.875em 1em;
-    padding: max(min(4.9687rem, calc((100% - 22.5rem) / 8)), 2.75rem) 0;
-    width: min(90vw, 52.8em);
-    margin: 0 auto;
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+    padding: max(min(6rem, calc((100% - 22.5rem) / 8)), 2.75rem) 0;
+    width: min(90vw, 41.5625em);
+    margin-inline: auto;
+  }
+
+  .hero__title {
     font-family: var(--font-family-secondary);
     text-transform: lowercase;
     font-size: var(--font-size-20);
+    line-height: var(--line-height-md);
+    margin-bottom: 2.2em;
   }
 
-  .header__logo {
-    font-size: var(--font-size-20);
-    line-height: var(--line-height-sm);
-
-    & a {
-      display: flex;
-      align-items: center;
-      gap: 0.8em;
-      color: inherit;
-      text-decoration: none;
-    }
-
-    & img {
-      border-radius: var(--border-radius-sm);
+  .hero__desc {
+    & p:not(:last-child) {
+      margin-bottom: 2em;
     }
   }
 
-  .nav {
-    display: flex;
-    justify-self: end;
-    align-items: center;
-  }
-
-  .nav__list {
-    display: flex;
-    justify-content: end;
-    flex-wrap: wrap;
-    padding: 0 0.8em;
-    gap: 0 1.2em;
-    font-weight: 700;
-
-    & .nav__item--lang {
-      color: var(--gray);
-      text-transform: uppercase;
-    }
-
-    & .nav__item {
-      list-style: none;
-
-      & a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      & a.active {
-        color: var(--dark);
-      }
-    }
+  .experience__title {
+    font-size: var(--font-size-32);
+    line-height: var(--line-height-md);
+    margin-bottom: 1.375em;
   }
 </style>
