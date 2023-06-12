@@ -7,11 +7,11 @@ import Title from '@/components/Title.astro'
 <Layout title="Matheus Almeida &nbsp;–&nbsp; Front-End Developer">
   <Header />
 
-  <main class="content-wrapper">
-    <section>
-      <h2 class="hero-title lowercase-title">Matheus Almeida</h2>
+  <main class="content-wrapper" aria-label="Main content">
+    <section aria-label="About section">
+      <Title as="h2" size="sm">Matheus Almeida</Title>
 
-      <div class="hero-desc">
+      <div class="hero-desc" aria-label="Resume">
         <p>I'm a front-end developer based in Manaus, Brazil. I'm interested in clean code, simple/usable design and creative coding.</p>
 
         <p>I'm currently looking for new opportunities to grow as a developer.</p>
@@ -20,8 +20,8 @@ import Title from '@/components/Title.astro'
       </div>
     </section>
 
-    <section>
-      <Title as="h2">Experience</Title>
+    <section aria-label="Experience section">
+      <Title as="h3">Experience</Title>
 
       <ul role="list" class="experience-list">
         <li class="experience-list__item">
@@ -53,13 +53,6 @@ import Title from '@/components/Title.astro'
     margin-inline: auto;
   }
 
-  .hero-title {
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-20);
-    line-height: var(--line-height-md);
-    margin-bottom: 2.2em;
-  }
-
   .hero-desc {
     & p:not(:last-child) {
       margin-bottom: 2em;
@@ -81,9 +74,9 @@ import Title from '@/components/Title.astro'
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    font-family: var(--font-family-secondary);
 
     & small {
+      font-family: var(--font-family-secondary);
       color: var(--gray);
       font-size: var(--font-size-14);
       line-height: var(--line-height-md);
@@ -91,6 +84,8 @@ import Title from '@/components/Title.astro'
     }
 
     & h4 {
+      font-weight: 500;
+      font-family: var(--font-family-primary);
       font-size: var(--font-size-20);
       line-height: var(--line-height-sm);
     }

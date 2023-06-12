@@ -2,25 +2,44 @@
 type Props = {
   as: string
   classes?: string
+  size?: 'sm' | 'md'
+  textTransform?: 'lowercase' | 'initial'
 }
 
-const { as, classes, ...rest } = Astro.props
-
+const { as, classes, size = 'md', textTransform = 'lowercase', ...rest } = Astro.props
 
 const Component = as
 ---
 
 <Component
   {...rest}
-  class:list={["title", "lowercase-title", classes]}
+  class:list={[
+    "title",
+    classes,
+    {
+      'title--small': size === 'sm',
+      'title--medium': size === 'md',
+      'to-lowercase':  textTransform === 'lowercase',
+    },
+  ]}
 >
   <slot />
 </Component>
 
 <style>
   .title {
-    font-size: var(--font-size-32);
+    font-family: var(--font-family-secondary);
     line-height: var(--line-height-md);
+    text-transform: lowercase;
+  }
+
+  .title--small {
+    font-size: var(--font-size-20);
+    margin-bottom: 2.2em;
+  }
+
+  .title--medium {
+    font-size: var(--font-size-32);
     margin-bottom: 1.375em;
   }
 </style>
