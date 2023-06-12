@@ -2,6 +2,8 @@
 import Header from '@/components/Header.astro'
 import Layout from '@/layouts/Layout.astro'
 import Title from '@/components/Title.astro'
+import { Image } from '@astrojs/image/components'
+import projects from '@/js/projects-data'
 ---
 
 <Layout title="Matheus Almeida &nbsp;–&nbsp; Front-End Developer">
@@ -16,7 +18,7 @@ import Title from '@/components/Title.astro'
 
         <p>I'm currently looking for new opportunities to grow as a developer.</p>
 
-        <p>Previously, I worked at <a href="#">Desenrolado</a>, where I built 18 interactive activities for school children. Before that, I worked at <a href="#">Kolabs</a>, built the company's landing page and led their UI development projects.</p>
+        <p>Previously, I worked at <a href="https://www.linkedin.com/in/mutheusalmeida/#experience" target="_blank">Desenrolado</a>, where I built 18 interactive activities for school children. Before that, I worked at <a href="https://www.linkedin.com/in/mutheusalmeida/#experience" target="_blank">Kolabs</a>, built the company's landing page and led their UI development projects.</p>
       </div>
     </section>
 
@@ -28,16 +30,39 @@ import Title from '@/components/Title.astro'
           <div class="experience-list__content">
             <small>may 2022 - april 2023</small>
 
-            <h4>Font-end developer @ <a href="#">Desenrolado</a></h4>
+            <h4>Font-end developer @ <a href="https://desenrolado.com/" target="_blank">Desenrolado</a></h4>
           </div>
         </li>
         <li class="experience-list__item">
           <div class="experience-list__content">
             <small>jan 2022 - nov 2022</small>
 
-            <h4>Font-end developer @ <a href="#">Kolabs</a></h4>
+            <h4>Font-end developer @ <a href="https://www.kolabs.us/en" target="_blank">Kolabs</a></h4>
           </div>
         </li>
+      </ul>
+    </section>
+
+    <section aria-label="Projects section">
+      <Title as="h3">Projects</Title>
+
+      <ul role="list" class="projects-list">
+        {projects.map(project => (
+          <li class="projects-list__item">
+            <a href={project.path} class="projects-list__content" target="_blank">
+              <Image
+                src={project.image}
+                alt={project.alt}
+                width={107}
+                height={80}
+                fit="cover"
+                position="left"
+              />
+
+              <h4>{project.title}</h4>
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
   </main>
@@ -66,7 +91,9 @@ import Title from '@/components/Title.astro'
     gap: 2em;
   }
 
-  .experience-list__item {
+
+  .experience-list__item,
+  .projects-list__item {
     list-style: none;
   }
 
@@ -88,6 +115,36 @@ import Title from '@/components/Title.astro'
       font-family: var(--font-family-primary);
       font-size: var(--font-size-20);
       line-height: var(--line-height-sm);
+    }
+  }
+
+  .projects-list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75em;
+
+    & a {
+     text-decoration: none;
+    }
+  }
+
+  .projects-list__content {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    width: max-content;
+
+    & img {
+      border-radius: var(--border-radius-sm);
+      border: 1px solid var(--gray);
+    }
+
+    & h4 {
+      font-size: var(--font-size-20);
+      line-height: var(--line-height-md);
+      font-family: var(--font-family-primary);
+      font-weight: 500;
     }
   }
 </style>
