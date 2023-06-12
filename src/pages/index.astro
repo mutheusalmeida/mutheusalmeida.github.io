@@ -1,6 +1,7 @@
 ---
 import Header from '@/components/Header.astro'
 import Layout from '@/layouts/Layout.astro'
+import Title from '@/components/Title.astro'
 ---
 
 <Layout title="Matheus Almeida &nbsp;–&nbsp; Front-End Developer">
@@ -20,7 +21,7 @@ import Layout from '@/layouts/Layout.astro'
     </section>
 
     <section>
-      <h3 class="experience-title lowercase-title">Experience</h3>
+      <Title as="h2">Experience</Title>
 
       <ul role="list" class="experience-list">
         <li class="experience-list__item">
@@ -63,12 +64,6 @@ import Layout from '@/layouts/Layout.astro'
     & p:not(:last-child) {
       margin-bottom: 2em;
     }
-  }
-
-  .experience-title {
-    font-size: var(--font-size-32);
-    line-height: var(--line-height-md);
-    margin-bottom: 1.375em;
   }
 
   .experience-list {

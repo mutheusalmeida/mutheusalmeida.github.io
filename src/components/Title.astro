@@ -1,0 +1,26 @@
+---
+type Props = {
+  as: string
+  classes?: string
+}
+
+const { as, classes, ...rest } = Astro.props
+
+
+const Component = as
+---
+
+<Component
+  {...rest}
+  class:list={["title", "lowercase-title", classes]}
+>
+  <slot />
+</Component>
+
+<style>
+  .title {
+    font-size: var(--font-size-32);
+    line-height: var(--line-height-md);
+    margin-bottom: 1.375em;
+  }
+</style>
