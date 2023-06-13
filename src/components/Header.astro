@@ -1,6 +1,10 @@
 ---
 import { Image } from '@astrojs/image/components'
 import logo from '@/assets/logo.jpg'
+import { getLangFromUrl, useTranslations } from '@/js/utils'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <header class="header">
@@ -21,7 +25,7 @@ import logo from '@/assets/logo.jpg'
   <nav class="nav" aria-label="Main navigation">
     <ul role="list" class="nav__list">
       <li class="nav__item">
-        <a href="/articles">Articles</a>
+        <a href="/articles">{t('nav.articles')}</a>
       </li>
       <li class="nav__item">
         <a href="https://github.com/mutheusalmeida">GitHub</a>
@@ -30,7 +34,19 @@ import logo from '@/assets/logo.jpg'
         <a href="https://codepen.io/matheusalmeida">CodePen</a>
       </li>
       <li class="nav__item nav__item--lang">
-        <a href="/pt-BR">PT</a> / <a class="active" href="/en">EN</a>
+        <a
+          class:list={[{ active: lang === 'pt-BR' }]}
+          href="/pt-BR"
+        >
+          PT
+        </a> /
+
+        <a
+          class:list={[{ active: lang === 'en' }]}
+          href="/"
+        >
+          EN
+        </a>
       </li>
     </ul>
   </nav>

@@ -1,0 +1,40 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { getLangFromUrl, useTranslations } from '@/js/utils'
+import Header from '@/components/Header.astro'
+import Title from '@/components/Title.astro'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+const href = {
+  'en': '/',
+  'pt-BR': '/pt-BR',
+}
+
+console.log(href[lang])
+---
+
+<Layout title={t('404.title')}>
+  <Header />
+
+  <div class="container">
+    <Title as="h1">{t('404.message')}</Title>
+
+    <a href={href[lang as keyof typeof href]}>{t('404.link')}</a>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: var(--spacing-192) 0;
+
+    & a {
+      width: max-content;
+    }
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import { getLangFromUrl } from '@/js/utils'
 import '@/styles/reset.css'
 
 type Props = {
@@ -6,14 +7,16 @@ type Props = {
 }
 
 const { title } = Astro.props
+
+const lang = getLangFromUrl(Astro.url)
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+    <title set:html={title}></title>
 		<meta name="description" content="Front-end developer, UI developer, or UI engineer, interested in clean code, simple/usable design and creative coding.">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">

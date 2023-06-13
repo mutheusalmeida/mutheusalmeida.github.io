@@ -1,7 +1,12 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "strict": true,
+    "verbatimModuleSyntax": true,
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+    ],
     "types": ["@astrojs/image/client"],
     "typeRoots": [
       "./node_modules/@types",
@@ -10,10 +15,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "src/*"
       ]
     },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
   }
 }
