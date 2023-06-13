@@ -5,7 +5,7 @@ import Title from '@/components/Title.astro'
 import { Image } from '@astrojs/image/components'
 import projects from '@/js/projects-data'
 
-const projectsOrdered = projects.sort((a, b) => +new Date(b.date) - +new Date(a.date))
+const projectsSortedByDate = projects.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 ---
 
 <Layout title="Matheus Almeida &nbsp;–&nbsp; Front-End Developer">
@@ -49,7 +49,7 @@ const projectsOrdered = projects.sort((a, b) => +new Date(b.date) - +new Date(a.
       <Title as="h3">Projects</Title>
 
       <ul role="list" class="projects-list">
-        {projectsOrdered.map(project => (
+        {projectsSortedByDate.map(project => (
           <li class="projects-list__item">
             <a href={project.path} class="projects-list__content" target="_blank">
               <Image
