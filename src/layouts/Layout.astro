@@ -45,8 +45,9 @@ const { title } = Astro.props
     --line-height-sm: calc(var(--line-height-base-unit) * 1.1111);
     --line-height-md: calc(var(--line-height-base-unit) * 1.1428);
     --border-radius-sm: calc(var(--base-unit) * 0.375);
-    --spacing-80: max(min(4.9687rem, calc((100% - 22.5rem) / 8)), 2.75rem);
-    --spacing-96: max(min(6rem, calc((100% - 22.5rem) / 8)), 2.75rem);
+    --spacing-80: max(min(4.9687rem, calc((100vw - 22.5rem) / 8)), 2.75rem);
+    --spacing-96: max(min(6rem, calc((100vw - 22.5rem) / 8)), 2.75rem);
+    --spacing-192: max(min(12rem, calc((100vw) / 8)), 6rem);
     --spacing-content:  41.5625em;
     --spacing-wide:  52.8em;
   }

@@ -68,6 +68,16 @@ const projectsSortedByDate = projects.sort((a, b) => +new Date(b.date) - +new Da
         ))}
       </ul>
     </section>
+
+    <section class="endorsement">
+      <blockquote aria-label="endorsement">
+        <p>
+          I was the project manager where Matheus worked as a front end developer. Throughout the project he was very helpful and always did his best to deliver. He always solved the problems we encountered, he was assertive and quick in his tasks and tried to go beyond what was requested. He was a great project partner.
+        </p>
+
+        <cite>– helder lobo, project manager</cite>
+      </blockquote>
+    </section>
   </main>
 </Layout>
 
@@ -75,7 +85,7 @@ const projectsSortedByDate = projects.sort((a, b) => +new Date(b.date) - +new Da
   .content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 6em;
+    gap: var(--spacing-192);
     padding: var(--spacing-96) 1em;
     width: min(90vw, var(--spacing-content));
     margin-inline: auto;
@@ -148,6 +158,22 @@ const projectsSortedByDate = projects.sort((a, b) => +new Date(b.date) - +new Da
       line-height: var(--line-height-md);
       font-family: var(--font-family-primary);
       font-weight: 500;
+    }
+  }
+
+  .endorsement {
+    & blockquote {
+      display: flex;
+      flex-direction: column;
+      font-size: var(--font-size-16);
+      gap: 1em;
+    }
+
+    & cite {
+      color: var(--gray);
+      font-family: var(--font-family-secondary);
+      font-style: normal;
+      font-weight: 700;
     }
   }
 </style>
