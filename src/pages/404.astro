@@ -6,13 +6,6 @@ import Title from '@/components/Title.astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
-
-const href = {
-  'en': '/',
-  'pt-BR': '/pt-BR',
-}
-
-console.log(href[lang])
 ---
 
 <Layout title={t('404.title')}>
@@ -21,7 +14,7 @@ console.log(href[lang])
   <div class="container">
     <Title as="h1">{t('404.message')}</Title>
 
-    <a href={href[lang as keyof typeof href]}>{t('404.link')}</a>
+    <a href={lang === 'pt-BR' ? `/${lang}` : '/'}>{t('404.link')}</a>
   </div>
 </Layout>
 

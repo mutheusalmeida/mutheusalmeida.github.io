@@ -6,16 +6,12 @@ import { getLangFromUrl, useTranslations } from '@/js/utils'
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 
-const href = {
-  'en': '/',
-  'pt-BR': '/pt-BR',
-}
-
+const url = Astro.url.pathname.endsWith('/') ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname
 ---
 
 <header class="header">
   <h1 class="header__logo" aria-label="Homepage">
-    <a href={href[lang as keyof typeof href]}>
+    <a href={lang === 'pt-BR' ? `/${lang}` : '/'}>
       <Image
         src={logo}
         alt="Matheus Almeida's icon"
@@ -31,7 +27,7 @@ const href = {
   <nav class="nav" aria-label="Main navigation">
     <ul role="list" class="nav__list">
       <li class="nav__item">
-        <a href={`${href[lang as keyof typeof href]}/articles`}>{t('nav.articles')}</a>
+        <a href={lang === 'pt-BR' ? `/${lang}/articles` : '/articles'}>{t('nav.articles')}</a>
       </li>
       <li class="nav__item">
         <a href="https://github.com/mutheusalmeida" target="_blank">GitHub</a>
@@ -42,14 +38,14 @@ const href = {
       <li class="nav__item nav__item--lang">
         <a
           class:list={[{ active: lang === 'pt-BR' }]}
-          href="/pt-BR"
+          href={url.includes('/pt-BR/') ? Astro.url.pathname : lang === 'pt-BR' ? url : `/pt-BR${url.replace(`/${lang}`, '')}`}
         >
           PT
         </a> /
 
         <a
           class:list={[{ active: lang === 'en' }]}
-          href="/"
+          href={!url ? '/' : lang === 'en' ? url : url.includes(`/${lang}/`) ? url.replace(`/${lang}/`, '/') : `/${url.replace(`/${lang}`, '')}`}}
         >
           EN
         </a>
