@@ -3,7 +3,7 @@ import dekoder from '@/assets/dekoder.png'
 import markee from '@/assets/markee.png'
 import notee from '@/assets/notee.png'
 
-const data = [
+export const projects = [
   {
     path: 'https://github.com/mutheusalmeida/pawxy-search',
     image: pawxySearch,
@@ -33,5 +33,3 @@ const data = [
     date: 'Sep 14, 2021, 3:40 AM GMT-4',
   },
 ]
-
-export default data

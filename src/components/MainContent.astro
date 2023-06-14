@@ -1,8 +1,8 @@
 ---
 import Title from '@/components/Title.astro'
 import { Image } from '@astrojs/image/components'
-import projects from '@/js/projects-data'
-import { getLangFromUrl, useTranslations } from '@/js/utils'
+import { getLangFromUrl, useTranslations, formatDate } from '@/js/utils'
+import { projects } from '@/js/data'
 
 const projectsSortedByDate = projects.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
@@ -29,16 +29,16 @@ const t = useTranslations(lang)
     <ul role="list" class="experience-list">
       <li class="experience-list__item">
         <div class="experience-list__content">
-          <small>may 2022 - april 2023</small>
+          <small>{formatDate(new Date('may 2022'), lang)} - {formatDate(new Date('april 2023'), lang)}</small>
 
-          <h4>Font-end developer @ <a href="https://desenrolado.com/" target="_blank">Desenrolado</a></h4>
+          <h4>{t('experience.role')} @ <a href="https://desenrolado.com/" target="_blank">Desenrolado</a></h4>
         </div>
       </li>
       <li class="experience-list__item">
         <div class="experience-list__content">
-          <small>jan 2022 - nov 2022</small>
+          <small>{formatDate(new Date('jan 2022'), lang)} - {formatDate(new Date('nov 2022'), lang)}</small>
 
-          <h4>Font-end developer @ <a href="https://www.kolabs.us/en" target="_blank">Kolabs</a></h4>
+          <h4>{t('experience.role')} @ <a href="https://www.kolabs.us/en" target="_blank">Kolabs</a></h4>
         </div>
       </li>
     </ul>
@@ -119,6 +119,7 @@ const t = useTranslations(lang)
       font-size: var(--font-size-14);
       line-height: var(--line-height-md);
       font-weight: 700;
+      text-transform: lowercase;
     }
 
     & h4 {

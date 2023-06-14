@@ -15,3 +15,14 @@ export function useTranslations (lang: keyof typeof ui) {
     return ui[lang][key] || ui[defaultLang][key]
   }
 }
+
+export function formatDate (data: Date, lang: string, options?: Intl.DateTimeFormatOptions) {
+  const config = options || {
+    month: 'short',
+    year: 'numeric',
+  }
+
+  const formatedDate = data.toLocaleString(lang, config)
+
+  return formatedDate
+}
