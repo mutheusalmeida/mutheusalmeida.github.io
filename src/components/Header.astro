@@ -15,7 +15,7 @@ const href = {
 
 <header class="header">
   <h1 class="header__logo" aria-label="Homepage">
-    <a href="/">
+    <a href={href[lang as keyof typeof href]}>
       <Image
         src={logo}
         alt="Matheus Almeida's icon"
