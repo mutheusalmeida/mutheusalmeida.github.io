@@ -10,6 +10,7 @@ const href = {
   'en': '/',
   'pt-BR': '/pt-BR',
 }
+
 ---
 
 <header class="header">
@@ -30,7 +31,7 @@ const href = {
   <nav class="nav" aria-label="Main navigation">
     <ul role="list" class="nav__list">
       <li class="nav__item">
-        <a href={`${href[lang as keyof typeof href]}articles`}>{t('nav.articles')}</a>
+        <a href={`${href[lang as keyof typeof href]}/articles`}>{t('nav.articles')}</a>
       </li>
       <li class="nav__item">
         <a href="https://github.com/mutheusalmeida" target="_blank">GitHub</a>
