@@ -45,7 +45,7 @@ const url = Astro.url.pathname.endsWith('/') ? Astro.url.pathname.slice(0, -1) :
 
         <a
           class:list={[{ active: lang === 'en' }]}
-          href={!url ? '/' : lang === 'en' ? url : url.includes(`/${lang}/`) ? url.replace(`/${lang}/`, '/') : `/${url.replace(`/${lang}`, '')}`}}
+          href={!url ? '/' : lang === 'en' ? url : url.includes(`/${lang}/`) ? url.replace(`/${lang}/`, '/') : `/${url.replace(`/${lang}`, '')}`}
         >
           EN
         </a>
