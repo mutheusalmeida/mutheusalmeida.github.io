@@ -1,14 +1,5 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import Header from '@/components/Header.astro'
-import MainContent from '@/components/MainContent.astro'
-import { getLangFromUrl, useTranslations } from '@/js/utils'
-
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+import Page from "@/pages/index.astro";
 ---
 
-<Layout title={t('seo.title')}>
-  <Header />
-  <MainContent />
-</Layout>
+<Page />
