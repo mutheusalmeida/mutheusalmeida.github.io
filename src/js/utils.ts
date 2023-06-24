@@ -8,27 +8,32 @@ export function getLangFromUrl(url: URL) {
   return defaultLang;
 }
 
-export const l = (url: URL, lang: keyof typeof ui) => {
+export function removeLeadingSlash(path: string) {
+  return path.replace(/^[/\\]+/, "");
+}
+
+export function removeTrailingSlash(path: string) {
+  return path.replace(/[/\\]+$/, "");
+}
+
+export function l(url: URL, lang: keyof typeof ui) {
   const currentLang = getLangFromUrl(url);
+  let pathname = removeTrailingSlash(url.pathname);
 
   if (currentLang !== lang) {
-    let withTrailingSlash = url.pathname.endsWith("/")
-      ? url.pathname
-      : url.pathname + "/";
+    pathname = removeLeadingSlash(pathname);
 
     if (lang === defaultLang) {
-      withTrailingSlash = withTrailingSlash.replace(`/${currentLang}`, "");
+      pathname = `/${pathname.split("/").slice(1).join("/")}`;
     } else {
-      withTrailingSlash = "/" + lang + withTrailingSlash;
+      pathname = `/${lang}/${pathname}`;
     }
 
-    const withoutTrailingSlash = withTrailingSlash.slice(0, -1);
-
-    return withoutTrailingSlash;
+    return pathname;
   }
 
-  return url.pathname.endsWith("/") ? url.pathname.slice(0, -1) : url.pathname;
-};
+  return pathname;
+}
 
 export function useTranslations(lang: keyof typeof ui) {
   return function t(key: keyof (typeof ui)[typeof defaultLang]) {
