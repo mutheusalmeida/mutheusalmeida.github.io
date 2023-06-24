@@ -26,13 +26,21 @@ export function l(url: URL, lang: keyof typeof ui) {
     if (lang === defaultLang) {
       pathname = `/${pathname.split("/").slice(1).join("/")}`;
     } else {
-      pathname = `/${lang}/${pathname}`;
+      pathname = pathname ? `/${lang}/${pathname}` : `/${lang}`;
     }
 
     return pathname;
   }
 
   return pathname;
+}
+
+export function normalizeLangTag(tag: string) {
+  if (!tag.includes("-")) return tag.toLowerCase();
+
+  const [lang, region] = tag.split("-");
+
+  return lang.toLowerCase() + "-" + region.toUpperCase();
 }
 
 export function useTranslations(lang: keyof typeof ui) {

@@ -15,19 +15,29 @@ import Title from "@/components/Title.astro";
 </Layout>
 
 <script>
-  import { getLangFromUrl, useTranslations } from "@/js/utils";
+  import {
+    getLangFromUrl,
+    useTranslations,
+    l,
+    normalizeLangTag,
+  } from "@/js/utils";
 
-  const lang = getLangFromUrl(new URL(window.location as unknown as string));
+  const url = new URL(window.location as unknown as string);
+  const lang = getLangFromUrl(url);
   const t = useTranslations(lang);
 
   const title = document.querySelector('[data-lang="title"]')!;
   const link = document.querySelector('[data-lang="link"]')!;
+  const ptSwitcher = document.querySelector('[data-lang="pt-switcher"]')!;
+  const enSwitcher = document.querySelector('[data-lang="en-switcher"]')!;
 
-  document.documentElement.lang = lang;
+  document.documentElement.lang = normalizeLangTag(lang);
   document.title = t("404.title");
   title.textContent = t("404.message");
   link.textContent = t("404.link");
 
+  ptSwitcher.setAttribute("href", l(url, "pt-br"));
+  enSwitcher.setAttribute("href", l(url, "en"));
   link.setAttribute("href", lang === "en" ? "/" : `/${lang}`);
 </script>
 

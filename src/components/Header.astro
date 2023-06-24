@@ -38,12 +38,17 @@ const t = useTranslations(lang);
       <li class="nav__item nav__item--lang">
         <a
           class:list={[{ active: lang === "pt-br" }]}
+          data-lang="pt-switcher"
           href={l(Astro.url, "pt-br")}
         >
           PT
         </a> /
 
-        <a class:list={[{ active: lang === "en" }]} href={l(Astro.url, "en")}>
+        <a
+          class:list={[{ active: lang === "en" }]}
+          data-lang="en-switcher"
+          href={l(Astro.url, "en")}
+        >
           EN
         </a>
       </li>

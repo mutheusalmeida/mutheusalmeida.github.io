@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl } from "@/js/utils";
+import { getLangFromUrl, normalizeLangTag } from "@/js/utils";
 import "@/styles/reset.css";
 
 type Props = {
@@ -12,7 +12,7 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <!DOCTYPE html>
-<html lang={lang}>
+<html lang={normalizeLangTag(lang)}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
