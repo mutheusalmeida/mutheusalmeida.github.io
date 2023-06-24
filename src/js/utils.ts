@@ -8,6 +8,28 @@ export function getLangFromUrl(url: URL) {
   return defaultLang;
 }
 
+export const l = (url: URL, lang: keyof typeof ui) => {
+  const currentLang = getLangFromUrl(url);
+
+  if (currentLang !== lang) {
+    let withTrailingSlash = url.pathname.endsWith("/")
+      ? url.pathname
+      : url.pathname + "/";
+
+    if (lang === defaultLang) {
+      withTrailingSlash = withTrailingSlash.replace(`/${currentLang}`, "");
+    } else {
+      withTrailingSlash = "/" + lang + withTrailingSlash;
+    }
+
+    const withoutTrailingSlash = withTrailingSlash.slice(0, -1);
+
+    return withoutTrailingSlash;
+  }
+
+  return url.pathname.endsWith("/") ? url.pathname.slice(0, -1) : url.pathname;
+};
+
 export function useTranslations(lang: keyof typeof ui) {
   return function t(key: keyof (typeof ui)[typeof defaultLang]) {
     return ui[lang][key] || ui[defaultLang][key];

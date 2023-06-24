@@ -1,8 +1,3 @@
-export const languages = {
-  en: "/",
-  "pt-br": "pt-br",
-};
-
 export const defaultLang = "en";
 
 export const ui = {
