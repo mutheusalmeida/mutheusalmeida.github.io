@@ -1,25 +1,32 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { getLangFromUrl, useTranslations } from "@/js/utils";
 import Header from "@/components/Header.astro";
 import Title from "@/components/Title.astro";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
-<Layout title={t("404.title")}>
+<Layout>
   <Header />
 
   <div class="container">
-    <Title as="h1">{t("404.message")}</Title>
+    <Title data-lang="title" as="h1" />
 
-    <a href={lang === "pt-br" ? `/${lang}` : "/"}>{t("404.link")}</a>
+    <a data-lang="link"></a>
   </div>
 </Layout>
 
 <script>
-  console.log(window.location.pathname);
+  import { getLangFromUrl, useTranslations } from "@/js/utils";
+
+  const lang = getLangFromUrl(new URL(window.location as unknown as string));
+  const t = useTranslations(lang);
+
+  const title = document.querySelector('[data-lang="title"]')!;
+  const link = document.querySelector('[data-lang="link"]')!;
+
+  title.textContent = t("404.title");
+  link.textContent = t("404.link");
+
+  link.setAttribute("href", lang === "en" ? "/" : `/${lang}`);
 </script>
 
 <style>
