@@ -1,20 +1,20 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import { getLangFromUrl, useTranslations } from '@/js/utils'
-import Header from '@/components/Header.astro'
-import Title from '@/components/Title.astro'
+import Layout from "@/layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "@/js/utils";
+import Header from "@/components/Header.astro";
+import Title from "@/components/Title.astro";
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title={t('404.title')}>
+<Layout title={t("404.title")}>
   <Header />
 
   <div class="container">
-    <Title as="h1">{t('404.message')}</Title>
+    <Title as="h1">{t("404.message")}</Title>
 
-    <a href={lang === 'pt-BR' ? `/${lang}` : '/'}>{t('404.link')}</a>
+    <a href={lang === "pt-br" ? `/${lang}` : "/"}>{t("404.link")}</a>
   </div>
 </Layout>
 

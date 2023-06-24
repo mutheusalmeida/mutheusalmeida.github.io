@@ -1,17 +1,19 @@
 ---
-import { Image } from '@astrojs/image/components'
-import logo from '@/assets/logo.jpg'
-import { getLangFromUrl, useTranslations } from '@/js/utils'
+import { Image } from "@astrojs/image/components";
+import logo from "@/assets/logo.jpg";
+import { getLangFromUrl, useTranslations } from "@/js/utils";
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
-const url = Astro.url.pathname.endsWith('/') ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname
+const url = Astro.url.pathname.endsWith("/")
+  ? Astro.url.pathname.slice(0, -1)
+  : Astro.url.pathname;
 ---
 
 <header class="header">
   <h1 class="header__logo" aria-label="Homepage">
-    <a href={lang === 'pt-BR' ? `/${lang}` : '/'}>
+    <a href={lang === "pt-br" ? `/${lang}` : "/"}>
       <Image
         src={logo}
         alt="Matheus Almeida's icon"
@@ -27,7 +29,9 @@ const url = Astro.url.pathname.endsWith('/') ? Astro.url.pathname.slice(0, -1) :
   <nav class="nav" aria-label="Main navigation">
     <ul role="list" class="nav__list">
       <li class="nav__item">
-        <a href={lang === 'pt-BR' ? `/${lang}/articles` : '/articles'}>{t('nav.articles')}</a>
+        <a href={lang === "pt-br" ? `/${lang}/articles` : "/articles"}
+          >{t("nav.articles")}</a
+        >
       </li>
       <li class="nav__item">
         <a href="https://github.com/mutheusalmeida" target="_blank">GitHub</a>
@@ -37,15 +41,25 @@ const url = Astro.url.pathname.endsWith('/') ? Astro.url.pathname.slice(0, -1) :
       </li>
       <li class="nav__item nav__item--lang">
         <a
-          class:list={[{ active: lang === 'pt-BR' }]}
-          href={url.includes('/pt-BR/') ? Astro.url.pathname : lang === 'pt-BR' ? url : `/pt-BR${url.replace(`/${lang}`, '')}`}
+          class:list={[{ active: lang === "pt-br" }]}
+          href={url.includes("/pt-br/")
+            ? Astro.url.pathname
+            : lang === "pt-br"
+            ? url
+            : `/pt-br${url.replace(`/${lang}`, "")}`}
         >
           PT
         </a> /
 
         <a
-          class:list={[{ active: lang === 'en' }]}
-          href={!url ? '/' : lang === 'en' ? url : url.includes(`/${lang}/`) ? url.replace(`/${lang}/`, '/') : `/${url.replace(`/${lang}`, '')}`}
+          class:list={[{ active: lang === "en" }]}
+          href={!url
+            ? "/"
+            : lang === "en"
+            ? url
+            : url.includes(`/${lang}/`)
+            ? url.replace(`/${lang}/`, "/")
+            : `/${url.replace(`/${lang}`, "")}`}
         >
           EN
         </a>
