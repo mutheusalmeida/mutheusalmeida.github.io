@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getLangFromUrl, useTranslations } from "@/js/utils";
 import Header from "@/components/Header.astro";
 import Title from "@/components/Title.astro";
+import { Debug } from "astro/components";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -10,6 +11,8 @@ const t = useTranslations(lang);
 
 <Layout title={t("404.title")}>
   <Header />
+
+  <Debug obj={Astro.url} />
 
   <div class="container">
     <Title as="h1">{t("404.message")}</Title>
