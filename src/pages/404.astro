@@ -20,11 +20,11 @@ import Title from "@/components/Title.astro";
   const lang = getLangFromUrl(new URL(window.location as unknown as string));
   const t = useTranslations(lang);
 
-  const pageTitle = document.querySelector("title")!;
   const title = document.querySelector('[data-lang="title"]')!;
   const link = document.querySelector('[data-lang="link"]')!;
 
-  pageTitle.textContent = t("404.title");
+  document.documentElement.lang = lang;
+  document.title = t("404.title");
   title.textContent = t("404.message");
   link.textContent = t("404.link");
 
