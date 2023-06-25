@@ -15,7 +15,7 @@ export const ui = {
     "endorsement.role": "project manager",
     "404.title": "Page not found!",
     "404.message": "Page not found",
-    "404.link": "Go to the homepage",
+    "404.hyperlink": "Go to the homepage",
   },
   "pt-br": {
     "seo.title": `Matheus Almeida &nbsp;–&nbsp; Desenvolvedor Front-End`,
@@ -31,6 +31,6 @@ export const ui = {
     "endorsement.role": "Gestor de Projetos",
     "404.title": "Página não encontrada!",
     "404.message": "Página não encontrada",
-    "404.link": "Vá para a página inicial",
+    "404.hyperlink": "Vá para a página inicial",
   },
 };

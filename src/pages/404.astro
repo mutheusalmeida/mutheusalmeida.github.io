@@ -8,9 +8,9 @@ import Title from "@/components/Title.astro";
   <Header />
 
   <div class="container">
-    <Title data-lang="title" as="h1" />
+    <Title data-lang="message" as="h1" />
 
-    <a data-lang="link"></a>
+    <a data-lang="hyperlink"></a>
   </div>
 </Layout>
 
@@ -26,15 +26,17 @@ import Title from "@/components/Title.astro";
   const lang = getLangFromUrl(url);
   const t = useTranslations(lang);
 
-  const title = document.querySelector('[data-lang="title"]')!;
-  const link = document.querySelector('[data-lang="link"]')!;
+  const title = document.querySelector('[data-lang="message"]')!;
+  const hyperlink = document.querySelector('[data-lang="hyperlink"]')!;
   const ptSwitcher = document.querySelector('[data-lang="pt-switcher"]')!;
   const enSwitcher = document.querySelector('[data-lang="en-switcher"]')!;
+  const home = document.querySelector('[data-lang="home"]')!;
+  const articles = document.querySelector('[data-lang="articles"]')!;
 
   document.documentElement.lang = normalizeLangTag(lang);
   document.title = t("404.title");
   title.textContent = t("404.message");
-  link.textContent = t("404.link");
+  hyperlink.textContent = t("404.hyperlink");
 
   ptSwitcher.setAttribute("href", l(url, "pt-br"));
   enSwitcher.setAttribute("href", l(url, "en"));
@@ -48,7 +50,12 @@ import Title from "@/components/Title.astro";
     ptSwitcher.classList.add("active");
   }
 
-  link.setAttribute("href", lang === "en" ? "/" : `/${lang}`);
+  articles.setAttribute(
+    "href",
+    lang === "en" ? "/articles" : `/${lang}/articles`
+  );
+  home.setAttribute("href", lang === "en" ? "/" : `/${lang}`);
+  hyperlink.setAttribute("href", lang === "en" ? "/" : `/${lang}`);
 </script>
 
 <style>
