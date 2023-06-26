@@ -1,12 +1,16 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import MainContent from '@/components/MainContent.astro'
 import { getLangFromUrl, useTranslations } from '@/js/utils'
+import Title from '@/components/Title.astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---
 
-<Layout title={t('home.seo.title')}>
-  <MainContent />
+<Layout title={t('articles.seo.title')}>
+  <div>
+    <Title as="h1">{t('articles.title')}</Title>
+
+    <p>{t('articles.desc')}</p>
+  </div>
 </Layout>

@@ -12,107 +12,94 @@ const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---
 
-<main class="content-wrapper" aria-label="Main content">
-  <section aria-label="About section">
-    <Title as="h2" size="sm">Matheus Almeida</Title>
+<section aria-label="About section">
+  <Title as="h2" size="sm">Matheus Almeida</Title>
 
-    <div class="hero-desc" aria-label="Resume">
-      <p>{t('about.para.first')}</p>
+  <div class="hero-desc" aria-label="Resume">
+    <p>{t('about.para.first')}</p>
 
-      <p>{t('about.para.second')}</p>
+    <p>{t('about.para.second')}</p>
 
-      <p set:html={t('about.para.third')} />
-    </div>
-  </section>
+    <p set:html={t('about.para.third')} />
+  </div>
+</section>
 
-  <section aria-label="Experience section">
-    <Title as="h3">{t('experience.title')}</Title>
+<section aria-label="Experience section">
+  <Title as="h3">{t('experience.title')}</Title>
 
-    <ul role="list" class="experience-list">
-      <li class="experience-list__item">
-        <div class="experience-list__content">
-          <small
-            >{formatDate(new Date('may 2022'), lang)} - {
-              formatDate(new Date('april 2023'), lang)
-            }</small
+  <ul role="list" class="experience-list">
+    <li class="experience-list__item">
+      <div class="experience-list__content">
+        <small
+          >{formatDate(new Date('may 2022'), lang)} - {
+            formatDate(new Date('april 2023'), lang)
+          }</small
+        >
+
+        <h4>
+          {t('experience.role')} @ <a
+            href="https://desenrolado.com/"
+            target="_blank">Desenrolado</a
           >
+        </h4>
+      </div>
+    </li>
+    <li class="experience-list__item">
+      <div class="experience-list__content">
+        <small
+          >{formatDate(new Date('jan 2022'), lang)} - {
+            formatDate(new Date('nov 2022'), lang)
+          }</small
+        >
 
-          <h4>
-            {t('experience.role')} @ <a
-              href="https://desenrolado.com/"
-              target="_blank">Desenrolado</a>
-          </h4>
-        </div>
-      </li>
-      <li class="experience-list__item">
-        <div class="experience-list__content">
-          <small
-            >{formatDate(new Date('jan 2022'), lang)} - {
-              formatDate(new Date('nov 2022'), lang)
-            }</small
+        <h4>
+          {t('experience.role')} @ <a
+            href="https://www.kolabs.us/en"
+            target="_blank">Kolabs</a
           >
+        </h4>
+      </div>
+    </li>
+  </ul>
+</section>
 
-          <h4>
-            {t('experience.role')} @ <a
-              href="https://www.kolabs.us/en"
-              target="_blank">Kolabs</a>
-          </h4>
-        </div>
-      </li>
-    </ul>
-  </section>
+<section aria-label="Projects section">
+  <Title as="h3">{t('projects.title')}</Title>
 
-  <section aria-label="Projects section">
-    <Title as="h3">{t('projects.title')}</Title>
+  <ul role="list" class="projects-list">
+    {
+      projectsSortedByDate.map((project) => (
+        <li class="projects-list__item">
+          <a href={project.path} class="projects-list__content" target="_blank">
+            <Image
+              src={project.image}
+              alt={project.alt}
+              width={107}
+              height={80}
+              fit="cover"
+              position="left"
+              quality={100}
+            />
 
-    <ul role="list" class="projects-list">
-      {
-        projectsSortedByDate.map((project) => (
-          <li class="projects-list__item">
-            <a
-              href={project.path}
-              class="projects-list__content"
-              target="_blank"
-            >
-              <Image
-                src={project.image}
-                alt={project.alt}
-                width={107}
-                height={80}
-                fit="cover"
-                position="left"
-                quality={100}
-              />
+            <h4>{project.title}</h4>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
 
-              <h4>{project.title}</h4>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+<section class="endorsement">
+  <blockquote aria-label="endorsement">
+    <p>
+      {t('endorsement.text')}
+    </p>
 
-  <section class="endorsement">
-    <blockquote aria-label="endorsement">
-      <p>
-        {t('endorsement.text')}
-      </p>
-
-      <cite>– Helder Lobo, {t('endorsement.role')}</cite>
-    </blockquote>
-  </section>
-</main>
+    <cite>– Helder Lobo, {t('endorsement.role')}</cite>
+  </blockquote>
+</section>
 
 <style>
-  .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-192);
-    padding: var(--spacing-96) 1em;
-    width: min(90vw, var(--spacing-content));
-    margin-inline: auto;
-  }
-
   .hero-desc {
     & p:not(:last-child) {
       margin-bottom: 2em;
@@ -138,7 +125,7 @@ const t = useTranslations(lang)
 
     & small {
       font-family: var(--font-family-secondary);
-      color: var(--gray);
+      color: var(--secondary-text-color);
       font-size: var(--font-size-14);
       line-height: var(--line-height-md);
       font-weight: 700;
@@ -189,12 +176,17 @@ const t = useTranslations(lang)
     & blockquote {
       display: flex;
       flex-direction: column;
-      font-size: var(--font-size-16);
       gap: 1em;
+
+      & p {
+        font-size: var(--font-size-16);
+      }
     }
 
     & cite {
-      color: var(--gray);
+      font-size: var(--font-size-14);
+      line-height: var(--line-height-md);
+      color: var(--secondary-text-color);
       font-family: var(--font-family-secondary);
       text-transform: lowercase;
       font-style: normal;

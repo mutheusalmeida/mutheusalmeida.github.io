@@ -1,12 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Header from '@/components/Header.astro'
 import Title from '@/components/Title.astro'
 ---
 
 <Layout>
-  <Header />
-
   <div class="container">
     <Title data-lang="message" as="h1" />
 
@@ -65,7 +62,6 @@ import Title from '@/components/Title.astro'
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    padding: var(--spacing-192) 0;
 
     & a {
       width: max-content;

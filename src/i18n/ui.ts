@@ -2,7 +2,7 @@ export const defaultLang = 'en'
 
 export const ui = {
   en: {
-    'seo.title': 'Matheus Almeida &nbsp;–&nbsp; Front-End Developer',
+    'home.seo.title': 'Matheus Almeida &nbsp;–&nbsp; Front-End Developer',
     'nav.articles': 'Articles',
     'about.para.first': `I'm a front-end developer based in Manaus, Brazil. I'm interested in clean code, simple/usable design and creative coding.`,
     'about.para.second': `I'm currently looking for new opportunities to grow as a developer.`,
@@ -16,9 +16,13 @@ export const ui = {
     '404.title': 'Page not found!',
     '404.message': 'Page not found',
     '404.hyperlink': 'Go to the homepage',
+    'articles.seo.title':
+      'Articles on programming &nbsp;–&nbsp; Matheus Almeida',
+    'articles.title': 'Articles on programming',
+    'articles.desc': "Tutorials on things I'm learning sorted by date.",
   },
   'pt-br': {
-    'seo.title': `Matheus Almeida &nbsp;–&nbsp; Desenvolvedor Front-End`,
+    'home.seo.title': `Matheus Almeida &nbsp;–&nbsp; Desenvolvedor Front-End`,
     'nav.articles': 'Artigos',
     'about.para.first': `Eu sou um desenvolvedor front-end de Manaus, Brasil. Eu tenho interesse em código limpo, design simples/utilizável, design interativo e programação criativa.`,
     'about.para.second': `Atualmente, estou procurando novas oportunidades para crescer como desenvolvedor.`,
@@ -32,5 +36,10 @@ export const ui = {
     '404.title': 'Página não encontrada!',
     '404.message': 'Página não encontrada',
     '404.hyperlink': 'Vá para a página inicial',
+    'articles.seo.title':
+      'Artigos sobre programação &nbsp;–&nbsp; Matheus Almeida',
+    'articles.title': 'Artigos sobre programação',
+    'articles.desc':
+      'Tutoriais sobre coisas que eu estou aprendendo organizados por data.',
   },
 }
