@@ -4,7 +4,9 @@ import { Image } from '@astrojs/image/components'
 import { getLangFromUrl, useTranslations, formatDate } from '@/js/utils'
 import { projects } from '@/js/data'
 
-const projectsSortedByDate = projects.sort((a, b) => +new Date(b.date) - +new Date(a.date))
+const projectsSortedByDate = projects.sort(
+  (a, b) => +new Date(b.date) - +new Date(a.date)
+)
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -19,7 +21,7 @@ const t = useTranslations(lang)
 
       <p>{t('about.para.second')}</p>
 
-      <p set:html={t('about.para.third')}></p>
+      <p set:html={t('about.para.third')} />
     </div>
   </section>
 
@@ -29,16 +31,32 @@ const t = useTranslations(lang)
     <ul role="list" class="experience-list">
       <li class="experience-list__item">
         <div class="experience-list__content">
-          <small>{formatDate(new Date('may 2022'), lang)} - {formatDate(new Date('april 2023'), lang)}</small>
+          <small
+            >{formatDate(new Date('may 2022'), lang)} - {
+              formatDate(new Date('april 2023'), lang)
+            }</small
+          >
 
-          <h4>{t('experience.role')} @ <a href="https://desenrolado.com/" target="_blank">Desenrolado</a></h4>
+          <h4>
+            {t('experience.role')} @ <a
+              href="https://desenrolado.com/"
+              target="_blank">Desenrolado</a>
+          </h4>
         </div>
       </li>
       <li class="experience-list__item">
         <div class="experience-list__content">
-          <small>{formatDate(new Date('jan 2022'), lang)} - {formatDate(new Date('nov 2022'), lang)}</small>
+          <small
+            >{formatDate(new Date('jan 2022'), lang)} - {
+              formatDate(new Date('nov 2022'), lang)
+            }</small
+          >
 
-          <h4>{t('experience.role')} @ <a href="https://www.kolabs.us/en" target="_blank">Kolabs</a></h4>
+          <h4>
+            {t('experience.role')} @ <a
+              href="https://www.kolabs.us/en"
+              target="_blank">Kolabs</a>
+          </h4>
         </div>
       </li>
     </ul>
@@ -48,23 +66,29 @@ const t = useTranslations(lang)
     <Title as="h3">{t('projects.title')}</Title>
 
     <ul role="list" class="projects-list">
-      {projectsSortedByDate.map(project => (
-        <li class="projects-list__item">
-          <a href={project.path} class="projects-list__content" target="_blank">
-            <Image
-              src={project.image}
-              alt={project.alt}
-              width={107}
-              height={80}
-              fit="cover"
-              position="left"
-              quality={100}
-            />
+      {
+        projectsSortedByDate.map((project) => (
+          <li class="projects-list__item">
+            <a
+              href={project.path}
+              class="projects-list__content"
+              target="_blank"
+            >
+              <Image
+                src={project.image}
+                alt={project.alt}
+                width={107}
+                height={80}
+                fit="cover"
+                position="left"
+                quality={100}
+              />
 
-            <h4>{project.title}</h4>
-          </a>
-        </li>
-      ))}
+              <h4>{project.title}</h4>
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </section>
 
@@ -102,7 +126,6 @@ const t = useTranslations(lang)
     gap: 2em;
   }
 
-
   .experience-list__item,
   .projects-list__item {
     list-style: none;
@@ -137,7 +160,7 @@ const t = useTranslations(lang)
     gap: 2.75em;
 
     & a {
-     text-decoration: none;
+      text-decoration: none;
     }
   }
 

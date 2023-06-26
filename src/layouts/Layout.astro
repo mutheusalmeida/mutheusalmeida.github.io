@@ -1,14 +1,14 @@
 ---
-import { getLangFromUrl, normalizeLangTag } from "@/js/utils";
-import "@/styles/reset.css";
+import { getLangFromUrl, normalizeLangTag } from '@/js/utils'
+import '@/styles/reset.css'
 
 type Props = {
-  title?: string;
-};
+  title?: string
+}
 
-const { title } = Astro.props;
+const { title } = Astro.props
 
-const lang = getLangFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url)
 ---
 
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ const lang = getLangFromUrl(Astro.url);
     --dark: #2c2c2c;
     --gray: rgba(112, 112, 112, 0.68);
     --white: #fff;
-    --font-family-primary: "Inter", system-ui, sans-serif;
+    --font-family-primary: 'Inter', system-ui, sans-serif;
     --font-family-secondary: acumin-pro, system-ui, sans-serif;
     --font-size-14: clamp(0.75rem, 0.25vw + 0.65rem, 0.875rem);
     --font-size-16: clamp(0.875rem, 0.5vw + 0.775rem, 1rem);

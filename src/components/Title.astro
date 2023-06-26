@@ -6,7 +6,13 @@ type Props = {
   textTransform?: 'lowercase' | 'initial'
 }
 
-const { as, classes, size = 'md', textTransform = 'lowercase', ...rest } = Astro.props
+const {
+  as,
+  classes,
+  size = 'md',
+  textTransform = 'lowercase',
+  ...rest
+} = Astro.props
 
 const Component = as
 ---
@@ -14,12 +20,12 @@ const Component = as
 <Component
   {...rest}
   class:list={[
-    "title",
+    'title',
     classes,
     {
       'title--small': size === 'sm',
       'title--medium': size === 'md',
-      'to-lowercase':  textTransform === 'lowercase',
+      'to-lowercase': textTransform === 'lowercase',
     },
   ]}
 >

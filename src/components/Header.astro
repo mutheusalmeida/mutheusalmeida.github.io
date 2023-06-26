@@ -1,15 +1,15 @@
 ---
-import { Image } from "@astrojs/image/components";
-import logo from "@/assets/logo.jpg";
-import { getLangFromUrl, useTranslations, l } from "@/js/utils";
+import { Image } from '@astrojs/image/components'
+import logo from '@/assets/logo.jpg'
+import { getLangFromUrl, useTranslations, l } from '@/js/utils'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <header class="header">
   <h1 class="header__logo" aria-label="Homepage">
-    <a data-lang="home" href={lang === "en" ? "/" : `/${lang}`}>
+    <a data-lang="home" href={lang === 'en' ? '/' : `/${lang}`}>
       <Image
         src={logo}
         alt="Matheus Almeida's icon"
@@ -27,8 +27,8 @@ const t = useTranslations(lang);
       <li class="nav__item">
         <a
           data-lang="articles"
-          href={lang === "en" ? "/articles" : `/${lang}/articles`}
-          >{t("nav.articles")}</a
+          href={lang === 'en' ? '/articles' : `/${lang}/articles`}
+          >{t('nav.articles')}</a
         >
       </li>
       <li class="nav__item">
@@ -39,17 +39,17 @@ const t = useTranslations(lang);
       </li>
       <li class="nav__item nav__item--lang">
         <a
-          class:list={[{ active: lang === "pt-br" }]}
+          class:list={[{ active: lang === 'pt-br' }]}
           data-lang="pt-switcher"
-          href={l(Astro.url, "pt-br")}
+          href={l(Astro.url, 'pt-br')}
         >
           PT
         </a> /
 
         <a
-          class:list={[{ active: lang === "en" }]}
+          class:list={[{ active: lang === 'en' }]}
           data-lang="en-switcher"
-          href={l(Astro.url, "en")}
+          href={l(Astro.url, 'en')}
         >
           EN
         </a>
