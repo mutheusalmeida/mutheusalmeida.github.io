@@ -37,6 +37,7 @@ import Title from "@/components/Title.astro";
   document.title = t("404.title");
   title.textContent = t("404.message");
   hyperlink.textContent = t("404.hyperlink");
+  articles.textContent = t("nav.articles");
 
   ptSwitcher.setAttribute("href", l(url, "pt-br"));
   enSwitcher.setAttribute("href", l(url, "en"));
