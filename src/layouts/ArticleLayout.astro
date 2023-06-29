@@ -12,7 +12,7 @@ type Props = {
 const { data } = Astro.props
 ---
 
-<div class="article">
+<div class="article-content">
   <header>
     <Date date={data.date} />
 
@@ -21,3 +21,19 @@ const { data } = Astro.props
 
   <slot />
 </div>
+
+<style is:global>
+  .article-content {
+    & p {
+      margin: 1.5em 0;
+    }
+
+    & h3 {
+      font-family: var(--font-family-secondary);
+      text-transform: lowercase;
+      font-size: var(--font-size-20);
+      line-height: var(--line-height-md);
+      margin: 2.2em 0;
+    }
+  }
+</style>
