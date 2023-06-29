@@ -1,6 +1,6 @@
 ---
 title: 'Instalando o JDK no Linux'
-translatedSlug: 'pt-br/instalando-o-jdk-no-linux'
+translatedSlug: 'en/installing-jdk-on-linux'
 date: 2023-06-09
 draft: false
 tag: Java
