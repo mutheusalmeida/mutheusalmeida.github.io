@@ -14,10 +14,10 @@ export async function getStaticPaths() {
   )
 
   const paths = pages.map((page) => {
-    const [, ...slug] = page.slug.split('/')
+    const [, slug] = page.slug.split('/')
 
     return {
-      params: { slug: slug.join('/') || undefined },
+      params: { slug },
       props: { page },
     }
   })
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 const { page } = Astro.props
 const { Content } = await page.render()
 
-const [, ...route] = page.data.translatedSlug.split('/')
+const [, route] = page.data.translatedSlug.split('/')
 ---
 
 <Layout title={page.data.title}>
@@ -39,5 +39,5 @@ const [, ...route] = page.data.translatedSlug.split('/')
 
 <script define:vars={{ route }}>
   const enSwitcher = document.querySelector('[data-lang="en-switcher"]')
-  enSwitcher.setAttribute('href', `/articles/${route.join('/')}`)
+  enSwitcher.setAttribute('href', `/articles/${route}`)
 </script>
