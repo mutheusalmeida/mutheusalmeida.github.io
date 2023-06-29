@@ -2,9 +2,15 @@
 import Layout from '@/layouts/Layout.astro'
 import { getLangFromUrl, useTranslations } from '@/js/utils'
 import Title from '@/components/Title.astro'
+import Date from '@/components/Date.astro'
+import { getCollection } from 'astro:content'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
+
+const allArticles = await getCollection('articles', ({ id }) =>
+  id.startsWith(`${lang}/`)
+)
 ---
 
 <Layout title={t('articles.seo.title')}>
@@ -13,4 +19,41 @@ const t = useTranslations(lang)
 
     <p>{t('articles.desc')}</p>
   </div>
+
+  <div>
+    {
+      allArticles.map(({ slug, data }) => {
+        const [, route] = slug.split('/')
+        const path =
+          lang === 'en' ? `/articles/${route}` : `/${lang}/articles/${route}`
+
+        return (
+          <article class="article-entry">
+            <Date date={data.date} />
+
+            <h3 class="article-entry__title">
+              <a href={path}>{data.title}</a>
+            </h3>
+          </article>
+        )
+      })
+    }
+  </div>
 </Layout>
+
+<style>
+  .article-entry {
+    margin-bottom: 2.2em;
+  }
+
+  .article-entry__title {
+    font-weight: 500;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-20);
+    line-height: var(--line-height-sm);
+
+    & a {
+      text-decoration: none;
+    }
+  }
+</style>

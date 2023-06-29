@@ -30,10 +30,10 @@ const t = useTranslations(lang)
   <ul role="list" class="experience-list">
     <li class="experience-list__item">
       <div class="experience-list__content">
-        <small
+        <time
           >{formatDate(new Date('may 2022'), lang)} - {
             formatDate(new Date('april 2023'), lang)
-          }</small
+          }</time
         >
 
         <h4>
@@ -46,10 +46,10 @@ const t = useTranslations(lang)
     </li>
     <li class="experience-list__item">
       <div class="experience-list__content">
-        <small
+        <time
           >{formatDate(new Date('jan 2022'), lang)} - {
             formatDate(new Date('nov 2022'), lang)
-          }</small
+          }</time
         >
 
         <h4>
@@ -119,17 +119,15 @@ const t = useTranslations(lang)
   }
 
   .experience-list__content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-
-    & small {
+    & time {
       font-family: var(--font-family-secondary);
       color: var(--secondary-text-color);
       font-size: var(--font-size-14);
       line-height: var(--line-height-md);
+      display: inline-block;
       font-weight: 700;
       text-transform: lowercase;
+      margin-bottom: 0.5em;
     }
 
     & h4 {

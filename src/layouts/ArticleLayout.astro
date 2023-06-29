@@ -1,6 +1,6 @@
 ---
+import Date from '@/components/Date.astro'
 import Title from '@/components/Title.astro'
-import { formatDate, getLangFromUrl } from '@/js/utils'
 
 type Props = {
   data: {
@@ -10,35 +10,14 @@ type Props = {
 }
 
 const { data } = Astro.props
-const lang = getLangFromUrl(Astro.url)
 ---
 
 <div class="article">
   <header>
-    <time class="article__date"
-      >{
-        formatDate(data.date, lang, {
-          day: 'numeric',
-          month: 'long',
-          year: 'numeric',
-        })
-      }</time
-    >
+    <Date date={data.date} />
 
     <Title as="h2">{data.title}</Title>
   </header>
 
   <slot />
 </div>
-
-<style>
-  .article__date {
-    color: var(--secondary-text-color);
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-14);
-    text-transform: lowercase;
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 0.5em;
-  }
-</style>

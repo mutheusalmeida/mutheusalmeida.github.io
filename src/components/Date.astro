@@ -1,0 +1,30 @@
+---
+import { formatDate, getLangFromUrl } from '@/js/utils'
+
+const lang = getLangFromUrl(Astro.url)
+
+const { date } = Astro.props
+---
+
+<time
+  >{
+    formatDate(date, lang, {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    })
+  }</time
+>
+
+<style>
+  time {
+    color: var(--secondary-text-color);
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-14);
+    line-height: var(--line-height-md);
+    text-transform: lowercase;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+</style>
