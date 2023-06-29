@@ -1,0 +1,22 @@
+---
+import Title from '@/components/Title.astro'
+import { formatDate, getLangFromUrl } from '@/js/utils'
+
+type Props = {
+  data: {
+    title: string
+    date: Date
+  }
+}
+
+const { data } = Astro.props
+const lang = getLangFromUrl(Astro.url)
+---
+
+<div>
+  <date>{formatDate(data.date, lang)}</date>
+
+  <Title as="h2">{data.title}</Title>
+
+  <slot />
+</div>
