@@ -27,6 +27,8 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props
 const { Content } = await page.render()
+
+const [, ...route] = page.data.translatedSlug.split('/')
 ---
 
 <Layout title={page.data.title}>
@@ -34,3 +36,8 @@ const { Content } = await page.render()
     <Content />
   </ArticleLayout>
 </Layout>
+
+<script define:vars={{ route }}>
+  const ptSwitcher = document.querySelector('[data-lang="pt-switcher"]')
+  ptSwitcher.setAttribute('href', `/pt-br/articles/${route.join('/')}`)
+</script>
