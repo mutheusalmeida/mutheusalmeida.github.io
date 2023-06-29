@@ -6,7 +6,7 @@ export const ui = {
     'nav.articles': 'Articles',
     'about.para.first': `I'm a front-end developer based in Manaus, Brazil. I'm interested in clean code, simple/usable design and creative coding.`,
     'about.para.second': `I'm currently looking for new opportunities to grow as a developer.`,
-    'about.para.third': `Previously, I worked at <a href="https://www.linkedin.com/in/mutheusalmeida/#experience" target="_blank">Desenrolado</a>, where I built 18 interactive activities for school children. Before that, I worked at <a href="https://www.linkedin.com/in/mutheusalmeida/#experience" target="_blank">Kolabs</a>, built the company's landing page and led their UI development projects.`,
+    'about.para.third': `Previously, I worked at <a href="https://www.linkedin.com/in/mutheusalmeida/#experience" target="_blank">Desenrolado</a>, where I built 18 interactive activities for school children using React.js. Before that, I worked at <a href="https://www.linkedin.com/in/mutheusalmeida/#experience" target="_blank">Kolabs</a>, built the company's landing page and led their UI development projects.`,
     'experience.title': 'Experience 💼',
     'experience.role': 'Front-End Developer',
     'projects.title': 'Projects 💡',
