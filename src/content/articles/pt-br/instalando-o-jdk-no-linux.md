@@ -14,13 +14,13 @@ sudo apt update
 
 O comando `sudo apt update{:js}` atualiza o repositório do sistema com os últimos pacotes.
 
-Para instalar a versão 17 do JDK, basta executar o seguinte comando no terminal:
+Para instalar a versão 17 do JDK, basta executar o comando no terminal:
 
 ```js
 sudo apt install openjdk-17-jdk
 ```
 
-Agora, devemos configurar a variável de ambiente JAVA_HOME. Isso vai nos permitir usar os recursos do JDK.
+Agora, devemos configurar a variável de ambiente `JAVA_HOME{:js}`. Isso vai nos permitir usar os recursos do JDK.
 
 Primeiro, precisamos saber o caminho de instalação do JDK com o comando:
 
@@ -37,25 +37,25 @@ export JAVA_HOME=/caminho/copiado/do/terminal
 Para ter certeza que ocorreu tudo certo, podemos ver a versão do `javac{:js}` e `java{:js}` no terminal com os comandos:
 
 ```js
-javac - version
-java - version
+javac -version
+java -version
 ```
 
-javac é o compilador/comando responsável por trasformar código fonte Java em bytecodes Java.
+`javac{:js}` é o compilador/comando responsável por transformar código fonte Java em bytecode Java.
 
-Código fonte Java são clases e interfaces dentro de arquivos `.java{:js}` e bytecode é o código nativo da JVM.
+Código fonte Java são classes e interfaces dentro de arquivos `.java{:js}` e bytecode é o código nativo da JVM.
 
 ### Diferença entre JVM, JRE e JDK
 
 JVM significa Máquina Virtual Java.
 
-JRE siginifica Ambiente de Execução Java.
+JRE significa Ambiente de Execução Java.
 
-JDK siginifica Kit de Desenvolvimento Java.
+JDK significa Kit de Desenvolvimento Java.
 
 JVM e JRE executam o bytecode.
 
-JDK permite escrever Java, compilar para bytecode e excutar o bytecode.
+JDK permite escrever Java, compilar para bytecode e executar o bytecode.
 
 JDK = JRE + ferramentas de desenvolvimento.
 
