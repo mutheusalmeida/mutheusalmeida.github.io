@@ -35,5 +35,19 @@ const { data } = Astro.props
       line-height: var(--line-height-md);
       margin: 2.2em 0;
     }
+
+    & pre {
+      padding: 1em;
+      border-radius: 3px;
+    }
+
+    & pre > code {
+      display: grid;
+    }
+
+    & p > span > code {
+      padding: 3px;
+      border-radius: 3px;
+    }
   }
 </style>
