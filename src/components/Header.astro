@@ -1,7 +1,7 @@
 ---
-import { Image } from '@astrojs/image/components'
 import logo from '@/assets/logo.svg'
-import { getLangFromUrl, useTranslations, l } from '@/js/utils'
+import { getLangFromUrl, l, useTranslations } from '@/js/utils'
+import { Image } from '@astrojs/image/components'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -18,7 +18,7 @@ const t = useTranslations(lang)
         quality={100}
       />
 
-      <span>Matheus Almeida</span>
+      <span>MatheusAlmeida</span>
     </a>
   </h1>
 
