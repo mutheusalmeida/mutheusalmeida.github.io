@@ -1,11 +1,14 @@
-import { defineConfig } from 'astro/config'
 import image from '@astrojs/image'
+import { defineConfig } from 'astro/config'
+import { readFileSync } from 'node:fs'
 import rehypePrettyCode from 'rehype-pretty-code'
 
 /** @type {import('rehype-pretty-code').Options} */
 
 const prettyCodeOptions = {
-  theme: 'github-dark',
+  theme: JSON.parse(
+    readFileSync(new URL('./src/assets/theme.json', import.meta.url))
+  ),
 }
 
 // https://astro.build/config
