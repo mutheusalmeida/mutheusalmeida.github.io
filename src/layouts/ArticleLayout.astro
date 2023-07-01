@@ -51,5 +51,10 @@ const { data } = Astro.props
       padding: 3px;
       border-radius: 3px;
     }
+
+    & pre > code,
+    & p > span > code {
+      font-family: var(--font-family-mono);
+    }
   }
 </style>
