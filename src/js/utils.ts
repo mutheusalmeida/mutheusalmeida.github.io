@@ -1,4 +1,4 @@
-import { ui, defaultLang } from '@/i18n/ui'
+import { defaultLang, ui } from '@/i18n/ui'
 
 export function getLangFromUrl(url: URL) {
   const [, lang] = url.pathname.split('/')
@@ -59,7 +59,7 @@ export function formatDate(
     year: 'numeric',
   }
 
-  const formatedDate = data.toLocaleString(lang, config)
+  const formatedDate = data.toLocaleDateString(lang, { ...config, timeZone: 'UTC' })
 
   return formatedDate
 }
