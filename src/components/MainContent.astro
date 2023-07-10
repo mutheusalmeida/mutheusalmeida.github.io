@@ -1,8 +1,8 @@
 ---
 import Title from '@/components/Title.astro'
-import { Image } from '@astrojs/image/components'
-import { getLangFromUrl, useTranslations, formatDate } from '@/js/utils'
 import { projects } from '@/js/data'
+import { formatDate, getLangFromUrl, useTranslations } from '@/js/utils'
+import { Image } from '@astrojs/image/components'
 
 const projectsSortedByDate = projects.sort(
   (a, b) => +new Date(b.date) - +new Date(a.date)

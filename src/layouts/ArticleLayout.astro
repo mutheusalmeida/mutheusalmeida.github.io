@@ -1,5 +1,5 @@
 ---
-import Date from '@/components/Date.astro'
+import DateComponent from '@/components/DateComponent.astro'
 import Title from '@/components/Title.astro'
 
 type Props = {
@@ -14,7 +14,7 @@ const { data } = Astro.props
 
 <div class="article-content">
   <header>
-    <Date date={data.date} />
+    <DateComponent date={data.date} />
 
     <Title as="h2">{data.title}</Title>
   </header>
