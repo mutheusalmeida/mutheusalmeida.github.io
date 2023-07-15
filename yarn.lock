@@ -15,12 +15,12 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@astrojs/compiler@^1.0.1", "@astrojs/compiler@^1.4.2", "@astrojs/compiler@^1.5.0", "@astrojs/compiler@^1.5.1", "@astrojs/compiler@^1.5.3":
+"@astrojs/compiler@^1.0.1", "@astrojs/compiler@^1.4.2", "@astrojs/compiler@^1.5.1", "@astrojs/compiler@^1.5.3", "@astrojs/compiler@^1.5.5":
   version "1.5.7"
   resolved "https://registry.npmjs.org/@astrojs/compiler/-/compiler-1.5.7.tgz#8c377f30bc4542631d4adc11f48896d78f79a8ac"
   integrity sha512-dFU7GAMbpTUGPkRoCoMQrGFlTe3qIiQMSOxIXp/nB1Do4My9uogjEmBHdR5Cwr4i6rc5/1R3Od9v8kU/pkHXGQ==
 
-"@astrojs/image@^0.17.0":
+"@astrojs/image@^0.17.2":
   version "0.17.2"
   resolved "https://registry.npmjs.org/@astrojs/image/-/image-0.17.2.tgz#3c74eca3cca637107cd5542b14494bf7551a9889"
   integrity sha512-hw5vGBlyPwyt9E4ux7eej7dJrcSlTAaMYKYd8OWIJVsFSbV75sXNi+5lwbpNjDLGVIS6Baa4nzayjN5Gxo73MQ==
@@ -82,14 +82,6 @@
   dependencies:
     prismjs "^1.28.0"
 
-"@astrojs/react@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.npmjs.org/@astrojs/react/-/react-2.2.1.tgz#33132661bf21c9206f76e9ad2817010d638fe9db"
-  integrity sha512-nq5Zr8iWdwjSp5fh1NReaCplwsnL4w5PXAY5XWu1jE/frxEfF/ycGHrrhwWW0uJHX9G+kUtmQLR0GBhlR4FmAw==
-  dependencies:
-    "@babel/core" ">=7.0.0-0 <8.0.0"
-    "@babel/plugin-transform-react-jsx" "^7.17.12"
-
 "@astrojs/telemetry@^2.1.1":
   version "2.1.1"
   resolved "https://registry.npmjs.org/@astrojs/telemetry/-/telemetry-2.1.1.tgz#e371ce343fd70313334219cf36365c04b3a65fb6"
@@ -131,7 +123,7 @@
   resolved "https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.22.9.tgz#71cdb00a1ce3a329ce4cbec3a44f9fef35669730"
   integrity sha512-5UamI7xkUcJ3i9qVDS+KFDEK8/7oJ55/sJMB1Ge7IEapr7KfdfV/HErR+koZwOfd+SgtFKOKRhRakdg++DcJpQ==
 
-"@babel/core@>=7.0.0-0 <8.0.0", "@babel/core@^7.22.5":
+"@babel/core@^7.22.5":
   version "7.22.9"
   resolved "https://registry.npmjs.org/@babel/core/-/core-7.22.9.tgz#bd96492c68822198f33e8a256061da3cf391f58f"
   integrity sha512-G2EgeufBcYw27U4hhoIwFcgc1XU7TlXJ3mv04oOv1WCuo900U/anZSPzEqNjwdjgffkk2Gs0AN0dW1CKVLcG7w==
@@ -282,7 +274,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/plugin-transform-react-jsx@^7.17.12", "@babel/plugin-transform-react-jsx@^7.22.5":
+"@babel/plugin-transform-react-jsx@^7.22.5":
   version "7.22.5"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.22.5.tgz#932c291eb6dd1153359e2a90cb5e557dcf068416"
   integrity sha512-rog5gZaVbUip5iWDMTYbVM15XQq+RkUKhET/IHR6oizR+JEoN6CAfTTuHcK4vwUyzca30qqHqEpzBOnaRMWYMA==
@@ -947,36 +939,10 @@
   resolved "https://registry.npmjs.org/@types/parse5/-/parse5-6.0.3.tgz#705bb349e789efa06f43f128cef51240753424cb"
   integrity sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==
 
-"@types/prop-types@*":
-  version "15.7.5"
-  resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
-  integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
-
-"@types/react-dom@^18.0.6":
-  version "18.2.7"
-  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.2.7.tgz#67222a08c0a6ae0a0da33c3532348277c70abb63"
-  integrity sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react@*", "@types/react@^18.0.21":
-  version "18.2.15"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.2.15.tgz#14792b35df676c20ec3cf595b262f8c615a73066"
-  integrity sha512-oEjE7TQt1fFTFSbf8kkNuc798ahTUzn3Le67/PWjE8MAfYAD/qB7O8hSTcromLFqHCt9bcdOg5GXMokzTjJ5SA==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
 "@types/resolve@^1.17.0":
   version "1.20.2"
   resolved "https://registry.npmjs.org/@types/resolve/-/resolve-1.20.2.tgz#97d26e00cd4a0423b4af620abecf3e6f442b7975"
   integrity sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==
-
-"@types/scheduler@*":
-  version "0.16.3"
-  resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.3.tgz#cef09e3ec9af1d63d2a6cc5b383a737e24e6dcf5"
-  integrity sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==
 
 "@types/unist@^2", "@types/unist@^2.0.0":
   version "2.0.7"
@@ -1458,11 +1424,6 @@ cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
-
-csstype@^3.0.2:
-  version "3.1.2"
-  resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.2.tgz#1d4bf9d572f11c14031f0436e1c10bc1f571f50b"
-  integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
 
 debug@^4.0.0, debug@^4.1.0, debug@^4.3.4:
   version "4.3.4"
@@ -3238,13 +3199,13 @@ preferred-pm@^3.0.3:
     path-exists "^4.0.0"
     which-pm "2.0.0"
 
-prettier-plugin-astro@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.npmjs.org/prettier-plugin-astro/-/prettier-plugin-astro-0.10.0.tgz#b6a1b64176b676f97b97c526cfa3099eaf57d4f8"
-  integrity sha512-dPzop0gKZyVGpTDQmfy+e7FKXC9JT3mlpfYA2diOVz+Ui+QR1U4G/s+OesKl2Hib2JJOtAYJs/l+ovgT0ljlFA==
+prettier-plugin-astro@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.npmjs.org/prettier-plugin-astro/-/prettier-plugin-astro-0.11.0.tgz#c9fe7b82d78b854774f46ff33a53fd628c2fe602"
+  integrity sha512-rl2hJ4Kty/aEfGjk3i4JS+bpng9MjgvwqLRNzeb9NqYhqKoWNwOR39cIJXFjU1vR3zYOPnwWNRMelKb0orunYA==
   dependencies:
-    "@astrojs/compiler" "^1.5.0"
-    prettier "^2.8.8"
+    "@astrojs/compiler" "^1.5.5"
+    prettier "^3.0.0"
     sass-formatter "^0.7.6"
 
 prettier-plugin-astro@^0.9.1:
@@ -3261,6 +3222,11 @@ prettier@^2.8.3, prettier@^2.8.8:
   version "2.8.8"
   resolved "https://registry.npmjs.org/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
+
+prettier@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-3.0.0.tgz#e7b19f691245a21d618c68bc54dc06122f6105ae"
+  integrity sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==
 
 prismjs@^1.28.0:
   version "1.29.0"

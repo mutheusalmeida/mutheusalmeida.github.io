@@ -1,15 +1,12 @@
-import image from '@astrojs/image'
-import { defineConfig } from 'astro/config'
-import { readFileSync } from 'node:fs'
-import rehypePrettyCode from 'rehype-pretty-code'
+import { defineConfig } from 'astro/config';
+import { readFileSync } from 'node:fs';
+import rehypePrettyCode from 'rehype-pretty-code';
 
 /** @type {import('rehype-pretty-code').Options} */
-
+import image from "@astrojs/image";
 const prettyCodeOptions = {
-  theme: JSON.parse(
-    readFileSync(new URL('./src/assets/theme.json', import.meta.url))
-  ),
-}
+  theme: JSON.parse(readFileSync(new URL('./src/assets/theme.json', import.meta.url)))
+};
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,9 +15,9 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: false,
     remarkPlugins: [],
-    rehypePlugins: [[rehypePrettyCode, prettyCodeOptions]],
+    rehypePlugins: [[rehypePrettyCode, prettyCodeOptions]]
   },
   experimental: {
-    assets: true,
-  },
-})
+    assets: true
+  }
+});
