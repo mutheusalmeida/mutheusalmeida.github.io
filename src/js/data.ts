@@ -1,7 +1,7 @@
-import pawxySearch from '@/assets/pawxy-search.png'
 import dekoder from '@/assets/dekoder.png'
 import markee from '@/assets/markee.png'
 import notee from '@/assets/notee.png'
+import pawxySearch from '@/assets/pawxy-search.png'
 
 export const projects = [
   {

@@ -8,8 +8,8 @@ import { getCollection } from 'astro:content'
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 
-const allArticles = await getCollection('articles', ({ id }) =>
-  id.startsWith(`${lang}/`)
+const allArticles = await getCollection('articles', ({ id, data }) =>
+  id.startsWith(`${lang}/`) && !data.draft
 )
 
 const articlesSortedByDate = allArticles.sort(

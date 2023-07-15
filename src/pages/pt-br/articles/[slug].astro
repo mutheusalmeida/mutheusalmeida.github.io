@@ -9,8 +9,8 @@ type Props = {
 }
 
 export async function getStaticPaths() {
-  const pages = await getCollection('articles', ({ id }) =>
-    id.startsWith('pt-br/')
+  const pages = await getCollection('articles', ({ id, data }) =>
+    id.startsWith('pt-br/') && !data.draft
   )
 
   const paths = pages.map((page) => {
