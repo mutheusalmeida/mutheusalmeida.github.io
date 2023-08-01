@@ -2,7 +2,7 @@
 title: 'Tipos primitivos no Java'
 translatedSlug: 'en/primitive-data-types-in-java'
 date: 2023-07-17
-draft: true
+draft: false
 tag: Java
 ---
 
