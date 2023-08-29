@@ -1,35 +1,35 @@
-import dekoder from '@/assets/dekoder.webp'
-import markee from '@/assets/markee.webp'
-import notee from '@/assets/notee.webp'
-import pawxySearch from '@/assets/pawxy-search.webp'
+import coinsynch from '@/assets/coinsynch.png'
+import dekoder from '@/assets/dekoder.png'
+import pawxySearch from '@/assets/pawxy-search.png'
+import vanlife from '@/assets/vanlife.png'
 
 export const projects = [
   {
     path: 'https://github.com/mutheusalmeida/pawxy-search',
     image: pawxySearch,
-    alt: 'Pawxy search screenshot',
-    title: 'Pawxy search',
-    date: 'May 23, 2023, 2:04 PM GMT-4',
+    alt: 'Pawxy Search screenshot',
+    title: 'Pawxy Search',
+    date: 'May 30, 2023, 9:23 AM GMT-4',
   },
   {
-    path: 'https://github.com/mutheusalmeida/notee',
-    image: notee,
-    alt: 'Notee screenshot',
-    title: 'Notee',
-    date: 'Aug 6, 2021, 12:45 AM GMT-4',
+    path: 'https://github.com/mutheusalmeida/coinsynch/',
+    image: coinsynch,
+    alt: 'CoinSynch screenshot',
+    title: 'CoinSynch',
+    date: 'Aug 1, 2023, 3:03 PM GMT-4',
   },
   {
     path: 'https://github.com/mutheusalmeida/dekoder/',
     image: dekoder,
     alt: 'dekoder screenshot',
     title: 'dekoder',
-    date: 'May 11, 2023, 3:07 PM GMT-4',
+    date: 'May 17, 2023, 12:04 PM GMT-4',
   },
   {
-    path: 'https://github.com/mutheusalmeida/markee',
-    image: markee,
-    alt: 'Markee screenshot',
-    title: 'Markee',
-    date: 'Sep 14, 2021, 3:40 AM GMT-4',
+    path: 'https://github.com/mutheusalmeida/vanlife/',
+    image: vanlife,
+    alt: 'Vanlife screenshot',
+    title: 'Vanlife',
+    date: 'Aug 19, 2023, 3:15 PM GMT-4',
   },
 ]
