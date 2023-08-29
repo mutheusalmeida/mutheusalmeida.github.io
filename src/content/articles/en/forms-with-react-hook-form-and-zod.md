@@ -1,62 +1,86 @@
 ---
 title: 'Forms with React Hook Form and Zod'
 translatedSlug: 'pt-br/formularios-com-react-hook-form-e-zod'
-date: 2023-08-15
-draft: true
+date: 2023-08-29
+draft: false
 tag: React
 ---
 
-First, run the following command in the terminal:
+First, we need to install the necessary dependencies:
 
 ```js
-sudo apt update
+yarn add react-hook-form @hookform/resolvers zod
 ```
 
-The `sudo apt update{:js}` command updates the system repository with the latest packages.
-
-To install JDK version 17, run the command:
+Now, we import them:
 
 ```js
-sudo apt install openjdk-17-jdk
+import { zodResolver } from '@hookform/resolvers/zod'
+import { SubmitHandler, useForm } from 'react-hook-form'
+import { z } from 'zod'
 ```
 
-Now, we must set the `JAVA_HOME{:js}` environment variable. This will allow us to use JDK tools.
-
-First, we need to know the JDK installation path running the command:
+We use `z.object(){:js}` to create a new schema. The schema contains the fields that make up our form.
 
 ```js
-sudo update-alternatives --config java
+const formSchema = z
+  .object({
+    name: z.string().min(1, 'Name is required').max(100),
+    email: z.string().min(1, 'Email is required').email('Invalid email'),
+    password: z
+      .string()
+      .min(1, 'Password is required')
+      .min(8, 'Password must have at least 8 characters'),
+    confirmPassword: z.string().min(1, 'Password confirmation is required'),
+    terms: z.literal(true, {
+      errorMap: () => ({ message: 'You must accept the terms and conditions' }),
+    }),
+  })
 ```
-
-The next step is to copy the path shown in the terminal and run:
+To validate password confirmation, we use the `refine(){:js}` method, which accepts two parameters: a callback and an object.
 
 ```js
-export JAVA_HOME=/path/shown/in/the/terminal
+const formSchema = z
+  .object({
+
+    // Rest of the code
+    ...
+  }).refine((data) => data.password === data.confirmPassword, {
+    path: ['confirmPassword'],
+    message: 'Passwords do not match',
+  })
 ```
 
-To make sure everything went well, we can check the `javac{:js}` and `java{:js}` version running:
+We use `z.infer{:js}` to extract the form's type:
 
 ```js
-javac -version
-java -version
+type FormSchemaType = z.infer<typeof formSchema>
 ```
 
-`javac{:js}` is the compiler/command responsible for converting Java source code into Java bytecode.
+Finally, inside the form component, we implement React Hook Form passing `zodResolver(){:js}` to `resolver{:js}`. `zodResolver(){:js}` receives the previously created schema as a parameter.
 
-Java source code is the classes and interfaces inside `.java{:js}` files and bytecode is the JVM native code.
+```js
+export const Form = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<FormSchemaType>({
 
-### Difference between JVM, JRE, and JDK
+    // Making use of zodResolver
+    resolver: zodResolver(formSchema),
+  })
 
-JVM stands for Java Virtual Machine.
+  const onSubmit: SubmitHandler<FormSchemaType> = async (data) => {
+    console.log(data)
+  }
 
-JRE stands for Java Runtime Environment.
-
-JDK stands for Java Development Kit.
-
-JVM and JRE execute bytecode.
-
-JDK lets you write in Java, compile, and execute the bytecode.
-
-JDK = JRE + developer tools.
-
-JRE = JVM + libraries.
+  // Form using React Hook Form
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      ...
+    </form>
+  )
+}
+```
