@@ -58,7 +58,7 @@ const t = useTranslations(lang)
   </nav>
 </header>
 
-<style>
+<style is:global>
   .header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -119,10 +119,6 @@ const t = useTranslations(lang)
 
       & a.active {
         color: var(--dark);
-
-        @media (prefers-color-scheme: dark) {
-          color: var(--white);
-        }
       }
     }
   }
