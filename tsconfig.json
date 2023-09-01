@@ -8,8 +8,7 @@
         "name": "@astrojs/ts-plugin"
       }
     ],
-    "types": ["@astrojs/image/client"],
-    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "typeRoots": ["./node_modules/@types"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
