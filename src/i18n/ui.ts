@@ -2,7 +2,7 @@ export const defaultLang = 'en'
 
 export const ui = {
   en: {
-    'home.seo.title': 'matheus almeida 👋',
+    'home.title': 'Matheus Almeida 👋',
     'nav.articles': 'Articles',
     'about.para.first': `I'm a front-end developer based in Manaus, Brazil. I'm interested in clean code, simple/usable design and creative coding.`,
     'about.para.second': `I'm currently looking for new opportunities to grow as a developer.`,
@@ -14,16 +14,14 @@ export const ui = {
       'I was the project manager where Matheus worked as a front-end developer. Throughout the project, he was very helpful and always did his best to deliver. He always solved the problems we encountered, he was assertive and quick in his tasks, and tried to go beyond what was requested. He was a great project partner.',
     'endorsement.role': 'project manager',
     '404.title': 'Page not found 😑',
-    '404.message': 'Page not found 😑',
     '404.hyperlink': 'Go to the homepage',
-    'articles.seo.title': 'Articles on programming 📝',
     'articles.title': 'Articles on programming 📝',
     'articles.tags.title': 'Filter by topic',
     'articles.desc': "Notes on things I'm learning sorted by date.",
     'tags.seo.title': 'Articles tagged with {tag}',
   },
   'pt-br': {
-    'home.seo.title': `matheus almeida 👋`,
+    'home.title': `Matheus Almeida 👋`,
     'nav.articles': 'Artigos',
     'about.para.first': `Eu sou um desenvolvedor front-end de Manaus, Brasil. Eu tenho interesse em código limpo, design simples/utilizável, design interativo e programação criativa.`,
     'about.para.second': `Atualmente, estou procurando novas oportunidades para crescer como desenvolvedor.`,
@@ -35,9 +33,7 @@ export const ui = {
       'Eu era gestor do projeto em que o Matheus trabalhava como desenvolvedor front-end. Durante todo o projeto ele foi muito prestativo e sempre deu o seu melhor pra realizar as entregas. Sempre solucionou os problemas que encontrávamos, tinha assertividade e velocidade nas suas tarefas e procurava ir além do solicitado. Foi um grande parceiro de projeto.',
     'endorsement.role': 'Gestor de Projetos',
     '404.title': 'Página não encontrada 😑',
-    '404.message': 'Página não encontrada 😑',
     '404.hyperlink': 'Vá para a página inicial',
-    'articles.seo.title': 'Artigos sobre programação 📝',
     'articles.title': 'Artigos sobre programação 📝',
     'articles.tags.title': 'Filtre por assunto',
     'articles.desc':

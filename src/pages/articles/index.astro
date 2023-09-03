@@ -16,7 +16,7 @@ const allArticles = await getCollection(
 const allTags = [...new Set(allArticles.map((article) => article.data.tag))]
 ---
 
-<Layout title={t('articles.seo.title')}>
+<Layout title={t('articles.title')}>
   <div>
     <Title heading="h2">{t('articles.title')}</Title>
 
@@ -56,10 +56,9 @@ const allTags = [...new Set(allArticles.map((article) => article.data.tag))]
   .tags-container__item {
     font-size: var(--font-size-14);
     line-height: var(--line-height-md);
-    border: 1px solid var(--gray);
+    border: 1px solid #000;
     padding: 2px 8px;
     border-radius: var(--border-radius-sm);
-    color: var(--secondary-text-color);
     font-weight: 500;
 
     & a {
