@@ -1,0 +1,34 @@
+---
+import Title from '@/components/Title.astro'
+import { getLangFromUrl, useTranslations } from '@/js/utils'
+import Layout from './Layout.astro'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+type Props = {
+  tag: string | undefined
+}
+
+const { tag } = Astro.props
+
+const prettyTag = tag ? `"${tag.slice(0, 1).toUpperCase() + tag.slice(1)}"` : ''
+
+const translatedTag = t('tags.seo.title').replace('{tag}', prettyTag)
+---
+
+<Layout title={translatedTag}>
+  <div class="tags-title">
+    <Title as="h1" classes="tags-title">{translatedTag}</Title>
+  </div>
+
+  <slot />
+</Layout>
+
+<style>
+  .tags-title {
+    & h1 {
+      margin-bottom: 0;
+    }
+  }
+</style>

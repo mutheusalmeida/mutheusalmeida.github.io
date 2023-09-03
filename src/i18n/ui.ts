@@ -19,6 +19,7 @@ export const ui = {
     'articles.seo.title': 'Articles on programming 📝',
     'articles.title': 'Articles on programming 📝',
     'articles.desc': "Notes on things I'm learning sorted by date.",
+    'tags.seo.title': 'Articles tagged with {tag}',
   },
   'pt-br': {
     'home.seo.title': `matheus almeida 👋`,
@@ -39,5 +40,6 @@ export const ui = {
     'articles.title': 'Artigos sobre programação 📝',
     'articles.desc':
       'Anotações sobre coisas que eu estou aprendendo organizados por data.',
+    'tags.seo.title': 'Artigos com a tag {tag}',
   },
 }

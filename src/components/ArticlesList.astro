@@ -1,0 +1,52 @@
+---
+import { getLangFromUrl } from '@/js/utils'
+import type { CollectionEntry } from 'astro:content'
+import DateComponent from './DateComponent.astro'
+
+type Props = {
+  data: CollectionEntry<'articles'>[]
+}
+
+const lang = getLangFromUrl(Astro.url)
+
+const { data } = Astro.props
+---
+
+<div>
+  {
+    data.map(({ slug, data }, index, articles) => {
+      const [, route] = slug.split('/')
+      const path =
+        lang === 'en' ? `/articles/${route}` : `/${lang}/articles/${route}`
+
+      return (
+        <article
+          class:list={[{ 'margin-bottom': index !== articles.length - 1 }]}
+        >
+          <DateComponent date={data.date} />
+
+          <h3 class="title">
+            <a href={path}>{data.title}</a>
+          </h3>
+        </article>
+      )
+    })
+  }
+</div>
+
+<style>
+  .margin-bottom {
+    margin-bottom: 2.2em;
+  }
+
+  .title {
+    font-weight: 500;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-20);
+    line-height: var(--line-height-sm);
+
+    & a {
+      text-decoration: none;
+    }
+  }
+</style>

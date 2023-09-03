@@ -21,12 +21,12 @@ const Component = as
   {...rest}
   class:list={[
     'title',
-    classes,
     {
       'title--small': size === 'sm',
       'title--medium': size === 'md',
       'to-lowercase': textTransform === 'lowercase',
     },
+    classes,
   ]}
 >
   <slot />
