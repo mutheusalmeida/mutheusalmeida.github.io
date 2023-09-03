@@ -18,6 +18,7 @@ export const ui = {
     '404.hyperlink': 'Go to the homepage',
     'articles.seo.title': 'Articles on programming 📝',
     'articles.title': 'Articles on programming 📝',
+    'articles.tags.title': 'Filter by topic',
     'articles.desc': "Notes on things I'm learning sorted by date.",
     'tags.seo.title': 'Articles tagged with {tag}',
   },
@@ -38,6 +39,7 @@ export const ui = {
     '404.hyperlink': 'Vá para a página inicial',
     'articles.seo.title': 'Artigos sobre programação 📝',
     'articles.title': 'Artigos sobre programação 📝',
+    'articles.tags.title': 'Filtre por assunto',
     'articles.desc':
       'Anotações sobre coisas que eu estou aprendendo organizados por data.',
     'tags.seo.title': 'Artigos com a tag {tag}',

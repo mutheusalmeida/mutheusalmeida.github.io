@@ -1,7 +1,7 @@
 ---
 import ArticlesList from '@/components/ArticlesList.astro'
 import Title from '@/components/Title.astro'
-import { getLangFromUrl, useTranslations } from '@/js/utils'
+import { getLangFromUrl, slugfy, useTranslations } from '@/js/utils'
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 
@@ -12,14 +12,56 @@ const allArticles = await getCollection(
   'articles',
   ({ id, data }) => id.startsWith(`${lang}/`) && !data.draft
 )
+
+const allTags = [...new Set(allArticles.map((article) => article.data.tag))]
 ---
 
 <Layout title={t('articles.seo.title')}>
   <div>
-    <Title heading="h1">{t('articles.title')}</Title>
+    <Title heading="h2">{t('articles.title')}</Title>
 
     <p>{t('articles.desc')}</p>
   </div>
 
-  <ArticlesList data={allArticles} />
+  <div>
+    <Title heading="h3" size="sm">{t('articles.tags.title')}</Title>
+
+    <div class="tags-container">
+      {
+        allTags.map((tag) => {
+          const slug = slugfy(tag)
+          const path = lang === 'en' ? `/tags/${slug}` : `/${lang}/tags/${slug}`
+
+          return (
+            <span class="tags-container__item">
+              <a href={path}>{tag}</a>
+            </span>
+          )
+        })
+      }
+    </div>
+
+    <ArticlesList data={allArticles} />
+  </div>
 </Layout>
+
+<style>
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-80);
+    gap: 2px;
+  }
+
+  .tags-container__item {
+    font-size: var(--font-size-14);
+    line-height: var(--line-height-md);
+    border: 1px solid var(--gray);
+    padding: 2px 8px;
+    border-radius: var(--border-radius-sm);
+
+    & a {
+      text-decoration: none;
+    }
+  }
+</style>

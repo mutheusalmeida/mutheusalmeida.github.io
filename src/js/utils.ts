@@ -59,7 +59,23 @@ export function formatDate(
     year: 'numeric',
   }
 
-  const formatedDate = data.toLocaleDateString(lang, { ...config, timeZone: 'UTC' })
+  const formatedDate = data.toLocaleDateString(lang, {
+    ...config,
+    timeZone: 'UTC',
+  })
 
   return formatedDate
+}
+
+export function slugfy(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '')
 }

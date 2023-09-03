@@ -1,10 +1,13 @@
 ---
 import ArticlesList from '@/components/ArticlesList.astro'
+import { slugfy } from '@/js/utils'
 import TagsLayout from '@/layouts/TagsLayout.astro'
 import { getCollection, type CollectionEntry } from 'astro:content'
 
 type Props = {
   articles: CollectionEntry<'articles'>[]
+  translatedTag: string
+  tag: string
 }
 
 export async function getStaticPaths() {
@@ -21,18 +24,28 @@ export async function getStaticPaths() {
     )
 
     return {
-      params: { tag: tag.toLowerCase() },
-      props: { articles: filteredArticles },
+      params: { tag: slugfy(tag.toLowerCase()) },
+      props: {
+        articles: filteredArticles,
+        tag,
+        translatedTag: slugfy(
+          filteredArticles[0].data.translatedTag.toLowerCase()
+        ),
+      },
     }
   })
 
   return paths
 }
 
-const { tag } = Astro.params
-const { articles } = Astro.props
+const { articles, tag, translatedTag } = Astro.props
 ---
 
 <TagsLayout tag={tag}>
   <ArticlesList data={articles} />
 </TagsLayout>
+
+<script define:vars={{ translatedTag }}>
+  const enSwitcher = document.querySelector('[data-lang="en-switcher"]')
+  enSwitcher.setAttribute('href', `/tags/${translatedTag}`)
+</script>
