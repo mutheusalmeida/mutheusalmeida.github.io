@@ -4,6 +4,7 @@ translatedSlug: 'en/forms-with-react-hook-form-and-zod'
 date: 2023-08-29
 draft: false
 tag: React
+translatedTag: React
 ---
 
 Primeiro, precisamos instalar as dependências necessárias:

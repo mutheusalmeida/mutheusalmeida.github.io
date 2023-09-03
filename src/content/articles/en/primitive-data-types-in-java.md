@@ -4,6 +4,7 @@ translatedSlug: 'pt-br/tipos-primitivos-no-java'
 date: 2023-07-17
 draft: false
 tag: Java
+translatedTag: Java
 ---
 
 Java supports eight primitive data types:

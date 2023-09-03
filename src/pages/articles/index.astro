@@ -12,18 +12,14 @@ const allArticles = await getCollection(
   'articles',
   ({ id, data }) => id.startsWith(`${lang}/`) && !data.draft
 )
-
-const articlesSortedByDate = allArticles.sort(
-  (a, b) => +new Date(b.data.date) - +new Date(a.data.date)
-)
 ---
 
 <Layout title={t('articles.seo.title')}>
   <div>
-    <Title as="h1">{t('articles.title')}</Title>
+    <Title heading="h1">{t('articles.title')}</Title>
 
     <p>{t('articles.desc')}</p>
   </div>
 
-  <ArticlesList data={articlesSortedByDate} />
+  <ArticlesList data={allArticles} />
 </Layout>

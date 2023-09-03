@@ -1,20 +1,20 @@
 ---
 type Props = {
-  as: string
+  heading: string
   classes?: string
   size?: 'sm' | 'md'
   textTransform?: 'lowercase' | 'initial'
 }
 
 const {
-  as,
+  heading,
   classes,
   size = 'md',
   textTransform = 'lowercase',
   ...rest
 } = Astro.props
 
-const Component = as
+const Component = heading
 ---
 
 <Component

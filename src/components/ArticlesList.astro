@@ -10,11 +10,15 @@ type Props = {
 const lang = getLangFromUrl(Astro.url)
 
 const { data } = Astro.props
+
+const articlesSortedByDate = data.sort(
+  (a, b) => +new Date(b.data.date) - +new Date(a.data.date)
+)
 ---
 
 <div>
   {
-    data.map(({ slug, data }, index, articles) => {
+    articlesSortedByDate.map(({ slug, data }, index, articles) => {
       const [, route] = slug.split('/')
       const path =
         lang === 'en' ? `/articles/${route}` : `/${lang}/articles/${route}`

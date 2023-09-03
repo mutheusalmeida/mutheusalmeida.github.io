@@ -4,6 +4,7 @@ translatedSlug: 'en/installing-jdk-on-linux'
 date: 2023-06-09
 draft: false
 tag: Java
+translatedTag: Java
 ---
 
 Primeiramente devemos executar o seguinte comando no terminal:

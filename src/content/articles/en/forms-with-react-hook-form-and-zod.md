@@ -4,6 +4,7 @@ translatedSlug: 'pt-br/formularios-com-react-hook-form-e-zod'
 date: 2023-08-29
 draft: false
 tag: React
+translatedTag: React
 ---
 
 First, we need to install the necessary dependencies:

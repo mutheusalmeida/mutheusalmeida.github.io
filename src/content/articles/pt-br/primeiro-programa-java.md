@@ -4,6 +4,7 @@ translatedSlug: 'en/java-first-program'
 date: 2023-07-10
 draft: false
 tag: Java
+translatedTag: Java
 ---
 
 Crie o diretório do projeto.
