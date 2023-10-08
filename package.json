@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/ts-plugin": "^1.1.3",
     "astro": "^3.0.6",
-    "postcss": "^8.4.24",
+    "postcss": "^8.4.31",
     "postcss-preset-env": "^8.4.2",
     "prettier": "^3.0.0",
     "prettier-plugin-astro": "^0.11.0",
