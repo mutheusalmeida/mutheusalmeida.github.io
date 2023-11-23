@@ -3,6 +3,30 @@ import dekoder from '@/assets/dekoder.png'
 import pawxySearch from '@/assets/pawxy-search.png'
 import vanlife from '@/assets/vanlife.png'
 
+export const experience = [
+  {
+    role: 'Front-End Developer',
+    company: 'Freelancer',
+    href: 'https://www.linkedin.com/in/mutheusalmeida/',
+    from: 'Abr 2023',
+    until: 'present',
+  },
+  {
+    role: 'Front-End Developer',
+    company: 'Desenrolado',
+    href: 'https://desenrolado.com/',
+    from: 'May 2022',
+    until: 'Apr 2023',
+  },
+  {
+    role: 'Front-End Developer',
+    company: 'Kolabs',
+    href: 'https://www.kolabs.us/en',
+    from: 'Jan 2022',
+    until: 'Nov 2022',
+  },
+]
+
 export const projects = [
   {
     path: 'https://github.com/mutheusalmeida/pawxy-search',
