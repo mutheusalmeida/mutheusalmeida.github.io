@@ -34,9 +34,7 @@ const t = useTranslations(lang)
           <div class="experience-list__content">
             <time>
               {formatDate(new Date(from), lang)} -{' '}
-              {until === 'present'
-                ? t('experience.present')
-                : formatDate(new Date(until), lang)}
+              {formatDate(new Date(until), lang)}
             </time>
 
             <h4>

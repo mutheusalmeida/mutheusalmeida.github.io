@@ -9,7 +9,7 @@ export const experience = [
     company: 'Freelancer',
     href: 'https://www.linkedin.com/in/mutheusalmeida/',
     from: 'Abr 2023',
-    until: 'present',
+    until: 'Nov 2023',
   },
   {
     role: 'Front-End Developer',
