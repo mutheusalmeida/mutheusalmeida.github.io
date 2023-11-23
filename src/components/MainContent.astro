@@ -77,10 +77,18 @@ const t = useTranslations(lang)
 <section class="endorsement">
   <blockquote aria-label="endorsement">
     <p>
-      {t('endorsement.text')}
+      {t('endorsement.para.first')}
     </p>
 
-    <cite>– Helder Lobo, {t('endorsement.role')}</cite>
+    <p>
+      {t('endorsement.para.second')}
+      {' '}
+      <a target="_blank" href="https://www.linkedin.com/in/mutheusalmeida"
+        >{t('endorsement.more')}</a
+      >
+    </p>
+
+    <cite>– Ricardo Alcantara, {t('endorsement.role')}</cite>
   </blockquote>
 </section>
 

@@ -10,9 +10,12 @@ export const ui = {
     'experience.title': 'Experience 💼',
     'experience.role': 'Front-End Developer',
     'projects.title': 'Projects 💡',
-    'endorsement.text':
-      'I was the project manager where Matheus worked as a front-end developer. Throughout the project, he was very helpful and always did his best to deliver. He always solved the problems we encountered, he was assertive and quick in his tasks, and tried to go beyond what was requested. He was a great project partner.',
-    'endorsement.role': 'project manager',
+    'endorsement.para.first':
+      'Having Matheus on the frontend project with ReactJS and CSS was a great experience! During the time we worked together, he not only excelled but practically took the reins of the project.',
+    'endorsement.para.second':
+      'Matheus is an exceptional professional capable of leading and carrying out tasks independently. His ability to not only meet deadlines, but also conduct work autonomously was impressive.',
+    'endorsement.more': 'Read more',
+    'endorsement.role': 'Information Technology Analyst',
     '404.title': 'Page not found 😑',
     '404.hyperlink': 'Go to the homepage',
     'articles.title': 'Articles on programming 📝',
@@ -29,9 +32,12 @@ export const ui = {
     'experience.title': 'Experiência 💼',
     'experience.role': 'Desenvolvedor Front-End',
     'projects.title': 'Projetos 💡',
-    'endorsement.text':
-      'Eu era gestor do projeto em que o Matheus trabalhava como desenvolvedor front-end. Durante todo o projeto ele foi muito prestativo e sempre deu o seu melhor pra realizar as entregas. Sempre solucionou os problemas que encontrávamos, tinha assertividade e velocidade nas suas tarefas e procurava ir além do solicitado. Foi um grande parceiro de projeto.',
-    'endorsement.role': 'Gestor de Projetos',
+    'endorsement.para.first':
+      'Contar com o Matheus no projeto de frontend com ReactJS e CSS foi uma ótima experiência! Durante o tempo em que trabalhamos juntos, ele não apenas se destacou, mas praticamente assumiu as rédeas do projeto.',
+    'endorsement.para.second':
+      'Matheus é um profissional excepcional, capaz de liderar e executar tarefas de maneira independente. Sua habilidade de não apenas cumprir prazos, mas também de conduzir o trabalho de forma autônoma, foi impressionante.',
+    'endorsement.more': 'Ver mais',
+    'endorsement.role': 'Analista de Tecnologia da Informação',
     '404.title': 'Página não encontrada 😑',
     '404.hyperlink': 'Vá para a página inicial',
     'articles.title': 'Artigos sobre programação 📝',
